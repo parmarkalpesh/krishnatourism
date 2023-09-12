@@ -34,7 +34,7 @@
           <div class="col-md-3 footer-item last-item">
             <h4>Contact Us</h4>
             <div class="contact-form">
-              <form id="contact footer-contact" action="" method="post">
+              <form id="contact footer-contact" action="./process/message-process.php" method="post">
                 <div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <fieldset>

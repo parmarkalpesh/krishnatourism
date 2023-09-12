@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> -->
 
     <title>Krishna Tourism</title>
 
@@ -78,12 +78,14 @@
               
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="about.php">About Us</a>
-                    <!-- <a class="dropdown-item" href="testimonials.html">Testimonials</a> -->
                     <a class="dropdown-item" href="terms.php">Terms</a>
                 </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./login.php">Login</a>
               </li>
             </ul>
           </div>

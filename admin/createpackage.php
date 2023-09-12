@@ -47,24 +47,24 @@ include './include/sidebar.php';
                   <form action="./processes/create-package-process.php" method="post" enctype="multipart/form-data">
                   <div class="input-style-1">
                     <label>Packge Name</label>
-                    <input type="text" name="packagename" placeholder="Package Name" />
+                    <input type="text" name="packagename" placeholder="Package Name" required />
                   </div>
                   <div class="input-style-1">
                     <label>Package Location</label>
-                    <input type="text" name="packagelocation" placeholder="Package Location" />
+                    <input type="text" name="packagelocation" placeholder="Package Location" required/>
                   </div>
                   <div class="input-style-1">
                     <label>Package Price</label>
-                    <input type="text" name="packageprice" placeholder="Package Price" />
+                    <input type="number" name="packageprice" placeholder="Package Price" required/>
                   </div>
                   <div class="input-style-1">
                     <label>Package Details</label>
-                    <input type="text" name="packagedetails" placeholder="Package Details" />
+                    <input type="text" name="packagedetails" placeholder="Package Details" required />
                   </div>
                   
                   <div class="input-style-1">
                   <label>Package image</label>
-                  <input type="file" name="packageimage" placeholder="Package image"required />
+                  <input type="file" name="packageimage" placeholder="Package image" required />
                 </div>
                 <input type="submit" name="upload" class="main-btn primary-btn btn-hover" value="Upload New Package">
                 </form>

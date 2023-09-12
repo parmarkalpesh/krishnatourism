@@ -19,31 +19,12 @@
         <div class="row">
           <div class="col-md-7">
             <div>
-              <img src="assets/images/product-1-720x480.jpg" alt="" class="img-fluid wc-image">
+            <img src="./admin/upload/<?php echo $row["packageimage"] ?>" alt="Image" class="img-fluid" style=" width:  400px; height: 400px; object-fit: cover">
+
+              <!-- <img src="" alt="" class="img-fluid wc-image"> -->
             </div>
 
             <br>
-
-            <div class="row">
-              <div class="col-sm-4 col-6">
-                <div>
-                  <img src="assets/images/product-1-720x480.jpg" alt="" class="img-fluid">
-                </div>
-                <br>
-              </div>
-              <div class="col-sm-4 col-6">
-                <div>
-                  <img src="assets/images/product-2-720x480.jpg" alt="" class="img-fluid">
-                </div>
-                <br>
-              </div>
-              <div class="col-sm-4 col-6">
-                <div>
-                  <img src="assets/images/product-3-720x480.jpg" alt="" class="img-fluid">
-                </div>
-                <br>
-              </div>
-            </div>
 
             <br>
           </div>
@@ -102,8 +83,8 @@
             </form>
 
             <br>
-
-            <a href="#" data-toggle="modal" data-target="#exampleModal" class="filled-button btn-block text-center">Enquiry</a>
+          
+            <a href="./booking.php" data-toggle="modal" data-target="#exampleModal" class="filled-button btn-block text-center">Book Now</a>
 
             <br>
           </div>
@@ -295,7 +276,7 @@
                 <br>
                 
                 <strong>
-                  <a href="mailto:john@carsales.com">john@carsales.com</a>
+                  <a href="#">contact@krishnatourism.com</a>
                 </strong>
               </p>
             </div>

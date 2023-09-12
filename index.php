@@ -53,7 +53,7 @@ include './includes/header.php';
     <div class="row">
       <div class="col-md-8">
         <h4>Request a call back right now ?</h4>
-        <span>Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</span>
+        <span>Connect with us with a ones missed call !!</span>
       </div>
       <div class="col-md-4">
         <a href="contact.php" class="border-button">Contact Us</a>
@@ -198,59 +198,6 @@ include './includes/header.php';
   </div>
 </div>
 
-<div class="testimonials">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="section-heading">
-          <h2>What they say <em>about us</em></h2>
-          <span>testimonials from our greatest clients</span>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div class="owl-testimonials owl-carousel">
-
-          <div class="testimonial-item">
-            <div class="inner-content">
-              <h4>George Walker</h4>
-              <span>Chief Financial Analyst</span>
-              <p>"Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem sit amet quam. Pellentesque in sagittis lacus."</p>
-            </div>
-            <img src="http://placehold.it/60x60" alt="">
-          </div>
-
-          <div class="testimonial-item">
-            <div class="inner-content">
-              <h4>John Smith</h4>
-              <span>Market Specialist</span>
-              <p>"In eget leo ante. Sed nibh leo, laoreet accumsan euismod quis, scelerisque a nunc. Mauris accumsan, arcu id ornare malesuada, est nulla luctus nisi."</p>
-            </div>
-            <img src="http://placehold.it/60x60" alt="">
-          </div>
-
-          <div class="testimonial-item">
-            <div class="inner-content">
-              <h4>David Wood</h4>
-              <span>Chief Accountant</span>
-              <p>"Ut ultricies maximus turpis, in sollicitudin ligula posuere vel. Donec finibus maximus neque, vitae egestas quam imperdiet nec. Proin nec mauris eu tortor consectetur tristique."</p>
-            </div>
-            <img src="http://placehold.it/60x60" alt="">
-          </div>
-
-          <div class="testimonial-item">
-            <div class="inner-content">
-              <h4>Andrew Boom</h4>
-              <span>Marketing Head</span>
-              <p>"Curabitur sollicitudin, tortor at suscipit volutpat, nisi arcu aliquet dui, vitae semper sem turpis quis libero. Quisque vulputate lacinia nisl ac lobortis."</p>
-            </div>
-            <img src="http://placehold.it/60x60" alt="">
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="callback-form">
   <div class="container">
@@ -263,7 +210,7 @@ include './includes/header.php';
       </div>
       <div class="col-md-12">
         <div class="contact-form">
-          <form id="contact" action="" method="post">
+          <form id="contact" action="./process/message-process.php" method="post">
             <div class="row">
               <div class="col-lg-4 col-md-12 col-sm-12">
                 <fieldset>

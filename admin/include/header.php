@@ -9,7 +9,7 @@
       href="assets/images/favicon.svg"
       type="image/x-icon"
     />
-    <title>Tourism Management System</title>
+    <title>Krishna Tourism Management</title>
 
     <!-- ========== All CSS files linkup ========= -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -38,12 +38,7 @@
                     <i class="lni lni-chevron-left me-2"></i> Menu
                   </button>
                 </div>
-                <div class="header-search d-none d-md-flex">
-                  <form action="#">
-                    <input type="text" placeholder="Search..." />
-                    <button><i class="lni lni-search-alt"></i></button>
-                  </form>
-                </div>
+                <h4>Krishna Tourism Managment System</h4>
               </div>
             </div>
             <div class="col-lg-7 col-md-7 col-6">
