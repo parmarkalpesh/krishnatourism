@@ -5,14 +5,7 @@
             <div class="col-md-6 order-last order-md-first">
               <div class="copyright text-center text-md-start">
                 <p class="text-sm">
-                  Designed and Developed by
-                  <a
-                    href="https://plainadmin.com"
-                    rel="nofollow"
-                    target="_blank"
-                  >
-                    KrishnaTourism
-                  </a>
+                  Designed and Developed by KrishnaTourism
                 </p>
               </div>
             </div>
@@ -47,6 +40,7 @@
     <script src="assets/js/world-merc.js"></script>
     <script src="assets/js/polyfill.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="../"></script>
 
     <script>
       // ======== jvectormap activation

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +12,7 @@
     <meta name="author" content="">
     <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> -->
 
-    <title>Krishna Tourism</title>
+    <title>Welcome to Krishna Tourism</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +47,7 @@
           </div>
           <div class="col-md-4">
             <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
             </ul>
@@ -84,9 +87,21 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact Us</a>
               </li>
+              <?php if(isset($_SESSION['tms'])) { ?>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./process/logout.php">Logout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Hello <?php echo "{$_SESSION['tms']}";?></a>
+            </li>
+              <?php } else { ?>
               <li class="nav-item">
                 <a class="nav-link" href="./login.php">Login</a>
               </li>
+              <?php }?>
             </ul>
           </div>
         </div>

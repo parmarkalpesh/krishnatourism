@@ -21,7 +21,7 @@ include './include/sidebar.php';
                   <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item">
-                        <a href="index.php">Dashboard</a>
+                        <a href="dashboard.php">Dashboard</a>
                       </li>
                       <li class="breadcrumb-item"><a>Package</a></li>
                       <li class="breadcrumb-item active" aria-current="page">
@@ -70,6 +70,9 @@ include './include/sidebar.php';
                 </form>
                   <!-- end input -->
                 </div>
+              </div>
+            </div>
+          </div>
                 <!-- end card -->
                 <!-- ======= input style end ======= -->
 

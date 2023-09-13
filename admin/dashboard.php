@@ -30,7 +30,7 @@ $all_message = $con->query($sql);
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="#">Dashboard</a>
+                  <a>Dashboard</a>
                 </li>
 
               </ol>
@@ -46,6 +46,7 @@ $all_message = $con->query($sql);
       <div class="col-xl-3 col-lg-4 col-sm-6">
         <div class="icon-card mb-30">
           <div class="icon purple">
+            <a href="./managepackage.php">
             <i class="lni lni-package"></i>
           </div>
           <div class="content">
@@ -57,12 +58,14 @@ $all_message = $con->query($sql);
             <!-- <h6 class="mb-10">10</h6> -->
           </div>
         </div>
+        </a>
         <!-- End Icon Cart -->
       </div>
       <!-- End Col -->
       <div class="col-xl-3 col-lg-4 col-sm-6">
         <div class="icon-card mb-30">
           <div class="icon purple">
+          <a href="./user.php">
             <i class="lni lni-user"></i>
           </div>
           <div class="content">
@@ -73,11 +76,13 @@ $all_message = $con->query($sql);
                 <?php }   ?>
           </div>
         </div>
+                </a>
         <!-- End Icon Cart -->
       </div>
       <div class="col-xl-3 col-lg-4 col-sm-6">
         <div class="icon-card mb-30">
           <div class="icon purple">
+          <a href="./message.php">
             <i class="lni lni-user"></i>
           </div>
           <div class="content">
@@ -88,6 +93,7 @@ $all_message = $con->query($sql);
                 <?php }   ?>
           </div>
         </div>
+                </a>
         <!-- End Icon Cart -->
       </div>
       <div class="col-xl-3 col-lg-4 col-sm-6">

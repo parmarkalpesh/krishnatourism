@@ -22,7 +22,7 @@ include '../database/connection.php';
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="index.php">Dashboard</a>
+                  <a href="dashboard.php">Dashboard</a>
                 </li>
                 <li class="breadcrumb-item"><a>Package</a></li>
                 <li class="breadcrumb-item active" aria-current="page">
@@ -87,6 +87,15 @@ include '../database/connection.php';
           <td>" . $row['packagedetails'] . "</td>
           <td><img src= './upload/" . $row['packageimage'] . "' height='100px' width='100px'></td>
           <td>
+          <form action='./update-package.php?packageid=$row[packageid]' method='post'>                              
+          <input type='submit' class='btn btn-primary' value='Update' />
+          </form>
+          <td/>
+          <td>
+          <form action='./processes/delete-packege.php?packageid=$row[packageid]'method='post' >
+          <input type='submit'  class='btn btn-danger' value='Delete' />
+          </td>
+          </form>
           
    </tr>";
                   }

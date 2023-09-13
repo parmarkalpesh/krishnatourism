@@ -1,6 +1,8 @@
 <?php
 
 include '../database/connection.php';
+session_start();
+echo "welcome" . $_SESSION['tms'];
 
     $username =$_POST['username'];
     $password =$_POST['password'];
@@ -11,7 +13,7 @@ include '../database/connection.php';
     $count = mysqli_num_rows($data);  
       
     if($count == 1){  
-
+        $_SESSION['tms'] = $row['username'];
         header("Location:../index.php");
     }  
     else{  
