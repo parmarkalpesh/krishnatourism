@@ -1,10 +1,9 @@
- <!-- Footer Starts Here -->
  <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-3 footer-item">
             <h4>Krishna Tourism</h4>
-            <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
+            <p>Let's Enjoy your trip Start With us your Unforgatable Trip and create lot's of memoris.</p>
             <ul class="social-icons">
               <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -14,20 +13,16 @@
           <div class="col-md-3 footer-item">
             <h4>Useful Links</h4>
             <ul class="menu-list">
-              <li><a href="#">Vivamus ut tellus mi</a></li>
-              <li><a href="#">Nulla nec cursus elit</a></li>
-              <li><a href="#">Vulputate sed nec</a></li>
-              <li><a href="#">Cursus augue hasellus</a></li>
-              <li><a href="#">Lacinia ac sapien</a></li>
+              <li><a href="./packages.php">Packages</a></li>
+              <li><a href="./contact.php">Contect Us</a></li>
+              <li><a href="./about.php">About Us</a></li>
+              <li><a href="./login.php">Login</a></li>
             </ul>
           </div>
           <div class="col-md-3 footer-item">
             <h4>Additional Pages</h4>
             <ul class="menu-list">
               <li><a href="./about.php">About Us</a></li>
-              <!-- <li><a href="#">Blog</a></li> -->
-              <!-- <li><a href="#">Testimonials</a></li> -->
-              <li><a href="./contact.php">Contact Us</a></li>
               <li><a href="./terms.php">Terms</a></li>
             </ul>
           </div>

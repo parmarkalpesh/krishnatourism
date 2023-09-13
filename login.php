@@ -173,7 +173,7 @@
               <div class="mb-4">
                 <h3>Log In to <strong>KrishnaTourism</strong></h3>
                 <p class="mb-4">
-                Welcome Back !!
+                  Welcome Back !!
                 </p>
               </div>
               <form action="./process/login-process.php" method="post">
@@ -184,15 +184,15 @@
                   <input type="password" class="form-control" name="password" placeholder="Password" />
                 </div>
                 <input type="submit" value="Log In" class="btn text-white btn-block btn-primary" />
-                
+
                 <br />
               </form>
               <form action="./index.php">
                 <input type="submit" value="Cancle" class="btn text-white btn-block btn-danger" />
               </form>
 
-                <span class="d-block text-left my-4 text-muted">
-                  I don't have Account  <a href="./register.php">Register here</a></span>
+              <span class="d-block text-left my-4 text-muted">
+                I don't have Account <a href="./register.php">Register here</a></span>
             </div>
           </div>
         </div>

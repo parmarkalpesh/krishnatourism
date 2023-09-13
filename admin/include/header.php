@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['admin'])) {
+  header("location:./index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +50,7 @@ session_start();
                 <button class="dropdown-toggle bg-transparent border-0" type="button" id="profile" data-bs-toggle="dropdown" aria-expanded="false">
                   <div class="profile-info">
                     <div class="info">
-                      <h6>hi </h6>
+                      <h6>Admin </h6>
                       <div class="image">
                         <img src="assets/images/profile/profile-image.png" alt="" />
                         <span class="status"></span>

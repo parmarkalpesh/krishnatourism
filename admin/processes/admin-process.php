@@ -1,13 +1,12 @@
 <?php
+session_start();
 $email = $_POST['email'];
 $password = $_POST['password']; 
-session_start();
-echo "welcome" . $_SESSION['tms'];
 
 
 if($email == "admin@gmail.com" && $password == "admin")
 {   
-    $_SESSION['tms'] = $row['username'];
+    $_SESSION['admin'] = 'admin';
     header("Location: ../dashboard.php");
 }
 else

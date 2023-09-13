@@ -10,7 +10,6 @@ include './includes/header.php';
     <div class="item item-1">
       <div class="img-fill">
         <div class="text-content">
-          <!-- <h6>lorem ipsum dolor sit amet!</h6> -->
           <h4>Let's Enjoy Your<br> Trip With Us...</h4>
           <p>Let's Start With us your Unforgatable Trip and create lot's of memoris</p>
           <a href="packages.php" class="filled-button">Packages</a>
@@ -24,9 +23,7 @@ include './includes/header.php';
         <div class="text-content">
           <h6>Get to know about <em>our company</em></h6>
 
-          <!-- <h6>some info to connect us</h6> -->
           <h4>LET'S INTRO <br> KRISHNA TOURISM </h4>
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa cupiditate mollitia adipisci assumenda laborum eius quae quo excepturi, eveniet. Dicta nulla ea beatae consequuntur?</p> -->
           <a href="about.php" class="filled-button">About Us</a>
         </div>
       </div>
@@ -38,7 +35,6 @@ include './includes/header.php';
         <div class="text-content">
           <h6>let's connect to us </h6>
           <h4>let's connect to us </h4>
-          <!-- <p>Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate mi. Sed nec cursus augue. Phasellus lacinia ac sapien vitae dapibus. Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</p> -->
           <a href="contact.php" class="filled-button">Contact Us</a>
         </div>
       </div>
@@ -67,8 +63,7 @@ include './includes/header.php';
     <div class="row">
       <div class="col-md-12">
         <div class="section-heading">
-          <h2>Featured <em>Packages</em></h2>
-          <!-- <span>Aliquam id urna imperdiet libero mollis hendrerit</span> -->
+          <h2>Photo <em>Gallary</em></h2>
         </div>
       </div>
       <div class="col-md-4">
@@ -139,7 +134,7 @@ include './includes/header.php';
           <div class="right-content">
             <span>Who we are</span>
             <h2>Get to know about <em>our company</em></h2>
-            <p>Curabitur pulvinar sem a leo tempus facilisis. Sed non sagittis neque. Nulla conse quat tellus nibh, id molestie felis sagittis ut. Nam ullamcorper tempus ipsum in cursus</p>
+            <p>We have last 15 years experence of tourism <br>managment</p>
             <a href="about.php" class="filled-button">Read More</a>
           </div>
         </div>
@@ -152,44 +147,27 @@ include './includes/header.php';
   <div class="container">
     <div class="section-heading">
       <h2>Why Choose <em>Us ?</em></h2>
-      <span>Aliquam id urna imperdiet libero mollis hendrerit</span>
     </div>
 
     <div class="row" id="tabs">
       <div class="col-md-4">
         <ul>
-          <li><a href='#tabs-1'>Lorem ipsum dolor sit amet, consectetur adipisicing <br> <small>John Doe &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
-          <li><a href='#tabs-2'>Mauris lobortis quam id dictum dignissim <br> <small>John Doe &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
-          <li><a href='#tabs-3'>Class aptent taciti sociosqu ad litora torquent per <br> <small>John Doe &nbsp;|&nbsp; 27.07.2020 10:10</small></a></li>
+          <li><a>Best Price Guarantee </a></li>
+          <li><a>Easy & quick Booking</a></li>
+          <li><a>Best TOur Selection</a></li>
+          <li><a>Unique Experience</a></li>
+          <li><a>Excellence in Travel </a></li>
+          <li><a>Fully Licenced</a></li>
+
         </ul>
-
-        <br>
-
-        <div class="text-center">
-          <a href="blog.html" class="filled-button">Read More</a>
-        </div>
-
-        <br>
       </div>
 
       <div class="col-md-8">
         <section class='tabs-content'>
           <article id='tabs-1'>
             <img src="assets/images/blog-image-1-940x460.jpg" alt="">
-            <h4><a href="blog-details.html">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></h4>
-            <p>Sed ut dolor in augue cursus ultrices. Vivamus mauris turpis, auctor vel facilisis in, tincidunt vel diam. Sed vitae scelerisque orci. Nunc non magna orci. Aliquam commodo mauris ante, quis posuere nibh vestibulum sit amet.</p>
           </article>
-          <article id='tabs-2'>
-            <img src="assets/images/blog-image-2-940x460.jpg" alt="">
-            <h4><a href="blog-details.html">Mauris lobortis quam id dictum dignissim</a></h4>
-            <p>Sed ut dolor in augue cursus ultrices. Vivamus mauris turpis, auctor vel facilisis in, tincidunt vel diam. Sed vitae scelerisque orci. Nunc non magna orci. Aliquam commodo mauris ante, quis posuere nibh vestibulum sit amet</p>
-          </article>
-          <article id='tabs-3'>
-            <img src="assets/images/blog-image-3-940x460.jpg" alt="">
-            <h4><a href="blog-details.html">Class aptent taciti sociosqu ad litora torquent per</a></h4>
-            <p>Mauris lobortis quam id dictum dignissim. Donec pellentesque erat dolor, cursus dapibus turpis hendrerit quis. Suspendisse at suscipit arcu. Nulla sed erat lectus. Nulla facilisi. In sit amet neque sapien. Donec scelerisque mi at gravida efficitur. Nunc lacinia a est eu malesuada. Curabitur eleifend elit sapien, sed pulvinar orci luctus eget.
-            </p>
-          </article>
+
         </section>
       </div>
     </div>
@@ -205,7 +183,6 @@ include './includes/header.php';
       <div class="col-md-12">
         <div class="section-heading">
           <h2>Request a <em>call back</em></h2>
-          <span>Etiam suscipit ante a odio consequat</span>
         </div>
       </div>
       <div class="col-md-12">

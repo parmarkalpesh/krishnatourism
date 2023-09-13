@@ -18,7 +18,8 @@ CREATE TABLE `user`
     `username` VARCHAR(20) NOT NULL,
     `phonenumber` VARCHAR(20) NOT NULL,
     `email` VARCHAR(50) NOT NULL,
-    `password` VARCHAR(50) NOT NULL
+    `password` VARCHAR(50) NOT NULL,
+    `usertype` VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE `contectmessage`
@@ -27,4 +28,12 @@ CREATE TABLE `contectmessage`
     `email` VARCHAR(20) NOT NULL,
     `subject` VARCHAR(50) NOT NULL,
     `message` VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE `booking`
+(
+    `name` VARCHAR(20) NOT NULL,
+    `phonenumber` VARCHAR(20) NOT NULL,
+    `date` VARCHAR(50) NOT NULL,
+    `countpeople` VARCHAR(50) NOT NULL
 );

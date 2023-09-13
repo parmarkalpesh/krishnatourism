@@ -7,7 +7,6 @@ include './includes/header.php';
         <div class="row">
           <div class="col-md-12">
             <h1>Terms</h1>
-            <span>Lorem ipsum dolor sit amet.</span>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ $password = $_POST['password'];
 $confirmpassword = $_POST['confirmpassword'];
 
 if ($password == $confirmpassword) {
-    $quary = "INSERT INTO user(`username`,phonenumber,email,`password`) VALUES('$username','$phonenumber','$email','$password')";
+    $quary = "INSERT INTO user(`username`,phonenumber,email,`password`,`usertype`) VALUES('$username','$phonenumber','$email','$password','user')";
     $data = mysqli_query($con, $quary);
     header("Location:../login.php");
 } else {

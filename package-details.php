@@ -1,8 +1,10 @@
 <?php include './includes/header.php';
 include './database/connection.php';
 
-$sql = "SELECT * FROM packages";
+$id = $_GET['id'];
+$sql = "SELECT * FROM packages WHERE packageid=$id";
 $all_package = $con->query($sql);
+$row = mysqli_fetch_assoc($all_package);
 
 ?>
 <!-- Page Content -->
@@ -10,12 +12,7 @@ $all_package = $con->query($sql);
      <div class="container">
           <div class="row">
                <div class="col-md-12">
-                   
-                    <h1><?php echo $row["packageprice"]  ?></h1>
-
-                    <span>
-                         Lorem ipsum dolor sit amet.
-                    </span>
+                    <h1> <?php echo  $row['packagelocation']  ?></h1>
                </div>
           </div>
      </div>
@@ -26,33 +23,8 @@ $all_package = $con->query($sql);
           <div class="row">
                <div class="col-md-7">
                     <div>
-                         <img src="assets/images/product-1-720x480.jpg" alt="" class="img-fluid wc-image">
+                         <img src="./admin/upload/<?php echo $row['packageimage'] ?>" alt="" class="img-fluid wc-image">
                     </div>
-
-                    <br>
-
-                    <div class="row">
-                         <div class="col-sm-4 col-6">
-                              <div>
-                                   <img src="assets/images/product-1-720x480.jpg" alt="" class="img-fluid">
-                              </div>
-                              <br>
-                         </div>
-                         <div class="col-sm-4 col-6">
-                              <div>
-                                   <img src="assets/images/product-2-720x480.jpg" alt="" class="img-fluid">
-                              </div>
-                              <br>
-                         </div>
-                         <div class="col-sm-4 col-6">
-                              <div>
-                                   <img src="assets/images/product-3-720x480.jpg" alt="" class="img-fluid">
-                              </div>
-                              <br>
-                         </div>
-                    </div>
-
-                    <br>
                </div>
 
                <style>
@@ -182,32 +154,39 @@ $all_package = $con->query($sql);
                     <div class="section-center">
                          <div class="container">
                               <div class="row">
-                                  
+
                                    <div class="col-md-12 col-md-pull-8">
                                         <div class="booking-form">
-                                             <form>
+                                             <h5 class="form-group">Tour Booking Details</h5>
+                                             <hr>
+                                             <form method="post" action="./process/booking-process.php">
                                                   <div class="form-group">
-                                                       <span class="form-label">Your Destination</span>
-                                                       <input class="form-control" type="text" placeholder="Enter a destination or hotel name">
+                                                       <span class="form-label">Your Name</span>
+                                                       <input class="form-control" name="name" type="text" placeholder="Enter your name">
                                                   </div>
+                                                  <div class="form-group">
+                                                       <span class="form-label">Your Phone Number</span>
+                                                       <input class="form-control" name="phonenumber" type="text" placeholder="Enter Phone Number">
+                                                  </div>
+                                                  <hr>
                                                   <div class="row">
                                                        <div class="col-sm-6">
                                                             <div class="form-group">
-                                                                 <span class="form-label">Check In</span>
-                                                                 <input class="form-control" type="date" required>
+                                                                 <span class="form-label">Select Date</span>
+                                                                 <input class="form-control" name="date" type="date" required>
                                                             </div>
                                                        </div>
                                                        <div class="col-sm-6">
                                                             <div class="form-group">
-                                                                 <span class="form-label">Check out</span>
-                                                                 <input class="form-control" type="date" required>
+                                                                 <span class="form-label">No. of Traveller</span>
+                                                                 <input class="form-control" name="countpeople" type="" required>
                                                             </div>
                                                        </div>
                                                   </div>
                                                   <div class="row">
-                                                       <div class="col-sm-4">
+                                                       <!--<div class="col-sm-6">
                                                             <div class="form-group">
-                                                                 <span class="form-label">Rooms</span>
+                                                                 <span class="form-label">Traveller </span>
                                                                  <select class="form-control">
                                                                       <option>1</option>
                                                                       <option>2</option>
@@ -215,19 +194,8 @@ $all_package = $con->query($sql);
                                                                  </select>
                                                                  <span class="select-arrow"></span>
                                                             </div>
-                                                       </div>
-                                                       <div class="col-sm-4">
-                                                            <div class="form-group">
-                                                                 <span class="form-label">Adults</span>
-                                                                 <select class="form-control">
-                                                                      <option>1</option>
-                                                                      <option>2</option>
-                                                                      <option>3</option>
-                                                                 </select>
-                                                                 <span class="select-arrow"></span>
-                                                            </div>
-                                                       </div>
-                                                       <div class="col-sm-4">
+                                                       </div> -->
+                                                       <!-- <div class="col-sm-6">
                                                             <div class="form-group">
                                                                  <span class="form-label">Children</span>
                                                                  <select class="form-control">
@@ -236,6 +204,13 @@ $all_package = $con->query($sql);
                                                                       <option>2</option>
                                                                  </select>
                                                                  <span class="select-arrow"></span>
+                                                            </div>
+                                                       </div> -->
+                                                  </div><hr>
+                                                  <div class="row">
+                                                       <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                 <span class="form-label">Total Amount</span>
                                                             </div>
                                                        </div>
                                                   </div>
@@ -259,7 +234,7 @@ $all_package = $con->query($sql);
                     <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
                          <thead>
                               <tr>
-                                   <th>Package</th>
+                                   <th>Package Name</th>
                                    <th>From</th>
                                    <th>To</th>
                                    <th>Price</th>
@@ -268,9 +243,9 @@ $all_package = $con->query($sql);
 
                          <tbody>
                               <tr>
-                                   <td></td>
-                                   <td>01-06-2020</td>
-                                   <td>31-12-2020</td>
+                                   <td><?php echo $row['packagename'] ?></td>
+                                   <td>Jamnagar</td>
+                                   <td><?php echo $row['packagelocation'] ?></td>
                                    <td>€ 300 per night</td>
                               </tr>
 
@@ -290,12 +265,12 @@ $all_package = $con->query($sql);
                          <div class="row">
                               <div class="col-md-2 col-sm-3">
                                    <p class="pjVpProductPolicyTitle">
-                                        <strong>Check-in</strong>
+                                        <strong>Policies</strong>
                                    </p>
                               </div>
                               <div class="col-md-10 col-sm-9">
                                    <p>
-                                        Donec dapibus semper sem, ac ultrices sem sagittis ut. Donec sit amet erat elit, sed pellentesque odio. In enim ligula, euismod a adipiscing in, laoreet quis turpis. Ut accumsan dignissim rutrum.
+                                        <?php echo  $row['packagename'] ?> Travelling all tours strat from Jamnagar.
                                    </p>
                               </div>
                          </div>
@@ -305,13 +280,13 @@ $all_package = $con->query($sql);
                          <div class="row">
                               <div class="col-md-2 col-sm-3">
                                    <p>
-                                        <strong>Check-out</strong>
+                                        <strong>Charges</strong>
                                    </p>
                               </div>
 
                               <div class="col-md-10 col-sm-9">
                                    <p>
-                                        Donec dapibus semper sem, ac ultrices sem sagittis ut. Donec sit amet erat elit, sed pellentesque odio. In enim ligula, euismod a adipiscing in, laoreet quis turpis. Ut accumsan dignissim rutrum.
+                                        5% GST has to be paid extra on the ticket price.
                                    </p>
                               </div>
                          </div>
@@ -332,23 +307,6 @@ $all_package = $con->query($sql);
                          </div>
                     </li>
 
-                    <li class="list-group-item">
-                         <div class="row">
-                              <div class="col-md-2 col-sm-3">
-                                   <p>
-                                        <strong>Policies</strong>
-                                   </p>
-                              </div>
-                              <div class="col-md-10 col-sm-9">
-                                   <div>
-                                        <p>
-                                             Donec dapibus semper sem, ac ultrices sem sagittis ut. Donec sit amet erat elit, sed pellentesque odio. In enim ligula, euismod a adipiscing in, laoreet quis turpis. Ut accumsan dignissim rutrum. <br>
-                                             Donec dapibus semper sem, ac ultrices sem sagittis ut. Donec sit amet erat elit, sed pellentesque odio. In enim ligula, euismod a adipiscing in, laoreet quis turpis. Ut accumsan dignissim rutrum. <br>
-                                        </p>
-                                   </div>
-                              </div>
-                         </div>
-                    </li>
 
                     <li class="list-group-item">
                          <div class="row">
@@ -361,8 +319,41 @@ $all_package = $con->query($sql);
                               <div class="col-md-10 col-sm-9">
                                    <div>
                                         <p>
-                                             Donec dapibus semper sem, ac ultrices sem sagittis ut. Donec sit amet erat elit, sed pellentesque odio. In enim ligula, euismod a adipiscing in, laoreet quis turpis. Ut accumsan dignissim rutrum. <br>
-                                             Donec dapibus semper sem, ac ultrices sem sagittis ut. Donec sit amet erat elit, sed pellentesque odio. In enim ligula, euismod a adipiscing in, laoreet quis turpis. Ut accumsan dignissim rutrum. <br>
+                                             Hotels and other transportaion charges extra.
+                                        </p>
+                                   </div>
+                              </div>
+                         </div>
+                    </li>
+                    <li class="list-group-item">
+                         <div class="row">
+                              <div class="col-md-2 col-sm-3">
+                                   <p>
+                                        <strong>Covid Guidelines</strong>
+                                   </p>
+                              </div>
+
+                              <div class="col-md-10 col-sm-9">
+                                   <div>
+                                        <p>
+                                             Guidelines of the Center/State Government regarding Covid-19 have to be followed - Please cooperate
+                                        </p>
+                                   </div>
+                              </div>
+                         </div>
+                    </li>
+                    <li class="list-group-item">
+                         <div class="row">
+                              <div class="col-md-2 col-sm-3">
+                                   <p>
+                                        <strong>With you</strong>
+                                   </p>
+                              </div>
+
+                              <div class="col-md-10 col-sm-9">
+                                   <div>
+                                        <p>
+                                             Keep Identycard
                                         </p>
                                    </div>
                               </div>
@@ -373,129 +364,15 @@ $all_package = $con->query($sql);
 
           <br>
 
-          <div class="row">
-               <div class="col-lg-9">
-                    <div class="tabs-content" style="display: block;">
-                         <h4>Map</h4>
-
-                         <img src="assets/images/map.jpg" class="img-fluid" alt="">
-                    </div>
-               </div>
-
-               <div class="col-lg-3">
-                    <div class="tabs-content">
-                         <h4>Contact Details</h4>
-
-                         <p>
-                              <span>Name</span>
-
-                              <br>
-
-                              <strong>John Smith</strong>
-                         </p>
-
-                         <p>
-                              <span>Phone</span>
-
-                              <br>
-
-                              <strong>
-                                   <a href="tel:123-456-789">123-456-789</a>
-                              </strong>
-                         </p>
-
-                         <p>
-                              <span>Mobile phone</span>
-
-                              <br>
-
-                              <strong>
-                                   <a href="tel:456789123">456789123</a>
-                              </strong>
-                         </p>
-
-                         <p>
-                              <span>Email</span>
-
-                              <br>
-
-                              <strong>
-                                   <a href="mailto:john@carsales.com">john@carsales.com</a>
-                              </strong>
-                         </p>
-                    </div>
-               </div>
-          </div>
-
-          <br>
-
 
 
           <br>
+
+
+
           <br>
           <br>
      </div>
 </div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-     <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-               <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Booking Form</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                         <span aria-hidden="true">&times;</span>
-                    </button>
-               </div>
-               <div class="modal-body">
-                    <form action="./process/booking-process.php" method="post" class="form" id="contact">
-                         <div class="row">
-                              <div class="col-md-6">
-                                   <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="Enter full name" required>
-                                   </div>
-                              </div>
-
-                              <div class="col-md-6">
-                                   <div class="form-group">
-                                        <input type="text" class="form-control" name="email" placeholder="Enter email address" required>
-                                   </div>
-                              </div>
-                         </div>
-
-                         <div class="row">
-                              <div class="col-md-6">
-                                   <div class="form-group">
-                                        <input type="text" pattern="0-9" class="form-control" name="phonenumber" placeholder="Enter phone number" required>
-                                   </div>
-                              </div>
-
-                              <!-- <div class="col-md-6">
-                        <div class="row">
-                           <div class="col-md-6">
-                              <div class="form-group">
-                                <input type="text" class="form-control" placeholder="From date" required="">
-                              </div>
-                           </div>
-
-                           <div class="col-md-6">
-                              <div class="form-group">
-                                <input type="text" class="form-control" placeholder="To date" required="">
-                              </div>
-                           </div>
-                        </div>
-                     </div> -->
-                         </div>
-               </div>
-               </form>
-               <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Send Request</button>
-               </div>
-          </div>
-     </div>
-</div>
-
-
 
 <?php include './includes/footer.php'; ?>
