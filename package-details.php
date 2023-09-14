@@ -2,7 +2,7 @@
 include './database/connection.php';
 
 $id = $_GET['id'];
-$sql = "SELECT * FROM packages WHERE packageid=$id";
+$sql = "SELECT * FROM packages WHERE id=$id";
 $all_package = $con->query($sql);
 $row = mysqli_fetch_assoc($all_package);
 
@@ -23,7 +23,7 @@ $row = mysqli_fetch_assoc($all_package);
           <div class="row">
                <div class="col-md-7">
                     <div>
-                         <img src="./admin/upload/<?php echo $row['packageimage'] ?>" alt="" class="img-fluid wc-image">
+                         <img src="./admin/upload/<?php echo $row['packageimage'] ?>" alt="" class="img-fluid wc-image" style=" width:  650px; height: 500px; object-fit: cover">
                     </div>
                </div>
 
@@ -182,35 +182,19 @@ $row = mysqli_fetch_assoc($all_package);
                                                                  <input class="form-control" name="countpeople" type="" required>
                                                             </div>
                                                        </div>
+                                                       
                                                   </div>
                                                   <div class="row">
-                                                       <!--<div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                 <span class="form-label">Traveller </span>
-                                                                 <select class="form-control">
-                                                                      <option>1</option>
-                                                                      <option>2</option>
-                                                                      <option>3</option>
-                                                                 </select>
-                                                                 <span class="select-arrow"></span>
-                                                            </div>
-                                                       </div> -->
-                                                       <!-- <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                 <span class="form-label">Children</span>
-                                                                 <select class="form-control">
-                                                                      <option>0</option>
-                                                                      <option>1</option>
-                                                                      <option>2</option>
-                                                                 </select>
-                                                                 <span class="select-arrow"></span>
-                                                            </div>
-                                                       </div> -->
                                                   </div><hr>
                                                   <div class="row">
                                                        <div class="col-sm-6">
                                                             <div class="form-group">
                                                                  <span class="form-label">Total Amount</span>
+                                                            </div>
+                                                       </div>
+                                                       <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                 <span class="form-label"><?php echo $row['packageprice'] ?></span>
                                                             </div>
                                                        </div>
                                                   </div>
@@ -246,7 +230,7 @@ $row = mysqli_fetch_assoc($all_package);
                                    <td><?php echo $row['packagename'] ?></td>
                                    <td>Jamnagar</td>
                                    <td><?php echo $row['packagelocation'] ?></td>
-                                   <td>€ 300 per night</td>
+                                   <td><?php echo $row['packageprice'] ?> per parson</td>
                               </tr>
 
 
@@ -261,6 +245,20 @@ $row = mysqli_fetch_assoc($all_package);
                <h4>INFO</h4>
 
                <ul class="list-group list-group-no-border">
+               <li class="list-group-item">
+                         <div class="row">
+                              <div class="col-md-2 col-sm-3">
+                                   <p class="pjVpProductPolicyTitle">
+                                        <strong>Details</strong>
+                                   </p>
+                              </div>
+                              <div class="col-md-10 col-sm-9">
+                                   <p>
+                                        <?php echo  $row['packagedetails'] ?> Travelling all tours strat from Jamnagar.
+                                   </p>
+                              </div>
+                         </div>
+                    </li>
                     <li class="list-group-item">
                          <div class="row">
                               <div class="col-md-2 col-sm-3">

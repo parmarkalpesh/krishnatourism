@@ -47,7 +47,7 @@ include '../database/connection.php';
                     <table class="table">
                       <thead>
                         <tr>
-                        <th><h6>User Id</h6></th>
+                        <th><h6> Id</h6></th>
                           <th><h6>Username</h6></th>
                           <th><h6>Phone Number</h6></th>
                           <th><h6>Email</h6></th>
@@ -63,7 +63,7 @@ include '../database/connection.php';
 
                           while ($row = mysqli_fetch_assoc($data)) {
                             echo "  <tr>
-                                    <td>" . $row['userid'] . "</td>
+                                    <td>" . $row['id'] . "</td>
                                     <td>" . $row['username'] . "</td>
                                     <td>" . $row['phonenumber'] . "</td>
                                     <td>" . $row['email'] . "</td>

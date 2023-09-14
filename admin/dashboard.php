@@ -11,6 +11,9 @@ $all_user = $con->query($sql);
 $sql = "SELECT count(*)as allmessage FROM contectmessage;";
 $all_message = $con->query($sql);
 
+$sql = "SELECT count(*)as allbooking FROM booking;";
+$all_booking = $con->query($sql);
+
 ?>
 
 <!-- ========== section start ========== -->
@@ -103,8 +106,11 @@ $all_message = $con->query($sql);
 
           </div>
           <div class="content">
-            <h3 class="text-bold mb-10">Total Inquiry</h3>
-            <h6 class="mb-10">10</h6>
+            <h3 class="text-bold mb-10">Total Booking</h3>
+            <?php
+                foreach ($all_booking as $booking) { ?>
+                  <h3><?php echo $booking['allbooking'] ?></h3>
+                <?php }   ?>
           </div>
         </div>
         <!-- End Icon Cart -->

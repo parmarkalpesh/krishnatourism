@@ -51,6 +51,10 @@ include './include/sidebar.php';
                 <input type="text" name="packagename" placeholder="Package Name" required />
               </div>
               <div class="input-style-1">
+                <label>Package Title</label>
+                <input type="text" name="packagetitle" placeholder="Package Title" required />
+              </div>
+              <div class="input-style-1">
                 <label>Package Location</label>
                 <input type="text" name="packagelocation" placeholder="Package Location" required />
               </div>

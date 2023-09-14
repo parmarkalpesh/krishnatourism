@@ -48,12 +48,12 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="inquiry.php">
+            <a href="booking.php">
               <span class="icon">
               <i class="lni lni-question-circle"></i>
 
               </span>
-              <span class="text">Inquiry</span>
+              <span class="text">Booking</span>
             </a>
           </li>
           <li class="nav-item">

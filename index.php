@@ -1,5 +1,8 @@
 <?php
 include './includes/header.php';
+include './database/connection.php';
+$sql = "SELECT * FROM packages";
+$all_package = $con->query($sql);
 ?>
 
 
@@ -66,57 +69,17 @@ include './includes/header.php';
           <h2>Photo <em>Gallary</em></h2>
         </div>
       </div>
+    <?php
+      while ($row = mysqli_fetch_assoc($all_package)) {
+      ?>
       <div class="col-md-4">
         <div class="service-item">
-          <img src="assets/images/product-1-720x480.jpg" alt="">
-          <div class="down-content">
-            <h4>Lorem ipsum dolor sit amet</h4>
-            <div style="margin-bottom:10px;">
-              <span> <sup>$</sup>300.00 - <sup>$</sup>400.00 </span>
-            </div>
-
-            <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-
-            <a href="package-details.html" class="filled-button">View More</a>
-          </div>
+        <img src="./admin/upload/<?php echo $row["packageimage"] ?>" alt="Image" class="img-fluid" style=" width:  900px; height: 500px; object-fit: cover">
         </div>
 
         <br>
       </div>
-      <div class="col-md-4">
-        <div class="service-item">
-          <img src="assets/images/product-2-720x480.jpg" alt="">
-          <div class="down-content">
-            <h4>Lorem ipsum dolor sit amet</h4>
-            <div style="margin-bottom:10px;">
-              <span> <sup>$</sup>300.00 - <sup>$</sup>400.00 </span>
-            </div>
-
-            <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-
-            <a href="package-details.html" class="filled-button">View More</a>
-          </div>
-        </div>
-
-        <br>
-      </div>
-      <div class="col-md-4">
-        <div class="service-item">
-          <img src="assets/images/product-3-720x480.jpg" alt="">
-          <div class="down-content">
-            <h4>Lorem ipsum dolor sit amet</h4>
-            <div style="margin-bottom:10px;">
-              <span> <sup>$</sup>300.00 - <sup>$</sup>400.00 </span>
-            </div>
-
-            <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-
-            <a href="package-details.html" class="filled-button">View More</a>
-          </div>
-        </div>
-
-        <br>
-      </div>
+      <?php }?>
     </div>
   </div>
 </div>

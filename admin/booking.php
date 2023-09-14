@@ -13,7 +13,7 @@ include '../database/connection.php';
       <div class="row align-items-center">
         <div class="col-md-6">
           <div class="title mb-30">
-            <h2> Manage Package </h2>
+            <h2> Total Booking </h2>
           </div>
         </div>
         <!-- end col -->
@@ -24,9 +24,8 @@ include '../database/connection.php';
                 <li class="breadcrumb-item">
                   <a href="dashboard.php">Dashboard</a>
                 </li>
-                <li class="breadcrumb-item"><a>Package</a></li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  Manage Package
+                  Booking
                 </li>
               </ol>
             </nav>
@@ -42,29 +41,23 @@ include '../database/connection.php';
       <div class="row">
         <div class="col-lg-12">
           <div class="card-style mb-30">
-            <h6 class="mb-10">Package List</h6>
+            <h6 class="mb-10">Booking List</h6>
 
             <div class="table-wrapper table-responsive">
               <table class="table">
                 <thead>
                   <tr>
-                  <th width="15%">
-                      <h6> Id</h6>
+                    <th>
+                      <h6>Name</h6>
                     </th>
-                    <th width="15%">
-                      <h6>Package Name</h6>
+                    <th>
+                      <h6>Phone Number</h6>
                     </th>
-                    <th width="15%">
-                      <h6>Package Location</h6>
+                    <th>
+                      <h6>Tour Date</h6>
                     </th>
-                    <th width="15%">
-                      <h6>Package Price</h6>
-                    </th>
-                    <th width="15%">
-                      <h6>Package Details</h6>
-                    </th>
-                    <th width="15%">
-                      <h6>Package Image</h6>
+                    <th>
+                      <h6>No .of Traveller</h6>
                     </th>
                     <th width="15%">
                       <h6>Action</h6>
@@ -73,33 +66,30 @@ include '../database/connection.php';
                   <!-- end table row-->
                 </thead>
                 <tbody>
-                  <?php
+                  <tr>
+                    <?php
+                    $sql = "SELECT * FROM booking";
+                    $data = mysqli_query($con, $sql);
 
-                  $sql = "SELECT * FROM packages";
-                  $data = mysqli_query($con, $sql);
+                    while ($row = mysqli_fetch_assoc($data)) {
+                      echo "  <tr>
+                                    <td>" . $row['name'] . "</td>
+                                    <td>" . $row['phonenumber'] . "</td>
+                                    <td>" . $row['date'] . "</td>
+                                    <td>" . $row['countpeople'] . "</td>
+                                    <td>
+                                    <form  >
+                                    <input type='submit'  class='btn btn-primary' value='Aprove' />
 
-                  while ($row = mysqli_fetch_assoc($data)) {
-                    echo "  <tr>
-                    <td>" . $row['id'] . "</td>
-          <td>" . $row['packagename'] . "</td>
-          <td>" . $row['packagelocation'] . "</td>
-          <td>" . $row['packageprice'] . "</td>
-          <td>" . $row['packagedetails'] . "</td>
-          <td><img src= './upload/" . $row['packageimage'] . "' height='100px' width='100px'></td>
-          <td>
-          <form action='./update-package.php?packageid=$row[id]' method='post'>                              
-          <input type='submit' class='btn btn-primary' value='Update' />
-          </form>
-          <td/>
-          <td>
-          <form action='./processes/delete-packege.php?packageid=$row[id]'method='post' >
-          <input type='submit'  class='btn btn-danger' value='Delete' />
-          </td>
-          </form>
-          
-   </tr>";
-                  }
-                  ?>
+                                    <input type='submit'  class='btn btn-danger' value='Cancle' />
+                                    </td>
+                                    </tr>";
+                    }
+                    ?>
+
+                  </tr>
+                  <!-- end table row -->
+                  <!-- end table row -->
                 </tbody>
               </table>
               <!-- end table -->
