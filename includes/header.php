@@ -88,7 +88,7 @@ session_start();
             </li>
             <?php if (isset($_SESSION['tms'])) { ?>
               <li class="nav-item">
-                <a class="nav-link" href="#">My History</a>
+                <a class="nav-link" href="./bookinghistory.php">My History</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./process/logout.php">Logout</a>
