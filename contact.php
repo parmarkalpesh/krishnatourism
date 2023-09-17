@@ -21,7 +21,7 @@ include './includes/header.php';
               <i class="fa fa-phone"></i>
               <h4>Phone</h4>
               <p>Connect to us with missed call<br>Request a call back</p>
-              <a href="#">+1 333 4040 5566</a>
+              <a href="#">+91 63531 90500</a>
             </div>
           </div>
           <div class="col-md-4">
@@ -29,7 +29,7 @@ include './includes/header.php';
               <i class="fa fa-envelope"></i>
               <h4>Email</h4>
               <p>Let's Connect with us to email<br>to Astimate your tour. </p>
-              <a href="#">contact@company.com</a>
+              <a >contact@krishnatourism.com</a>
             </div>
           </div>
           <div class="col-md-4">

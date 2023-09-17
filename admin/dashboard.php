@@ -86,7 +86,7 @@ $all_booking = $con->query($sql);
         <div class="icon-card mb-30">
           <div class="icon purple">
           <a href="./message.php">
-            <i class="lni lni-user"></i>
+            <i class="lni lni-inbox"></i>
           </div>
           <div class="content">
             <h3 class="text-bold mb-10">Total Message</h3>
@@ -102,8 +102,8 @@ $all_booking = $con->query($sql);
       <div class="col-xl-3 col-lg-4 col-sm-6">
         <div class="icon-card mb-30">
           <div class="icon purple">
-            <i class="lni lni-question-circle"></i>
-
+            <i class="lni lni-booking"></i>
+            <a href="./booking.php">
           </div>
           <div class="content">
             <h3 class="text-bold mb-10">Total Booking</h3>

@@ -16,31 +16,21 @@ include './includes/header.php';
       <div class="container">
         <div class="more-info-content">
           <div class="right-content">
-            <span>A) Lorem ipsum dolor sit amet</span>
-            <h5>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, iure.</h5>
-            <br>  
-            <p>Fusce nec ultrices lectus. Duis nec scelerisque risus. Ut id tempor turpis, ac dignissim ipsum. Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem. Pellentesque in sagittis lacus, vel auctor sem. Quisque eu quam eleifend, ullamcorper dui nec, luctus quam.</p>
-
-            <br>
-
-            <span>A) Lorem ipsum dolor sit amet</span>
-            <h5>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, iure.</h5>
-            <br>  
-            <p>Fusce nec ultrices lectus. Duis nec scelerisque risus. Ut id tempor turpis, ac dignissim ipsum. Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem. Pellentesque in sagittis lacus, vel auctor sem. Quisque eu quam eleifend, ullamcorper dui nec, luctus quam.</p>
-
-            <br>
-
-            <span>A) Lorem ipsum dolor sit amet</span>
-            <h5>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, iure.</h5>
-            <br>  
-            <p>Fusce nec ultrices lectus. Duis nec scelerisque risus. Ut id tempor turpis, ac dignissim ipsum. Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem. Pellentesque in sagittis lacus, vel auctor sem. Quisque eu quam eleifend, ullamcorper dui nec, luctus quam.</p>
-
-            <br>
-
-            <span>A) Lorem ipsum dolor sit amet</span>
-            <h5>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, iure.</h5>
-            <br>  
-            <p>Fusce nec ultrices lectus. Duis nec scelerisque risus. Ut id tempor turpis, ac dignissim ipsum. Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem. Pellentesque in sagittis lacus, vel auctor sem. Quisque eu quam eleifend, ullamcorper dui nec, luctus quam.</p>
+            <span>&circledS; Start up all Tours : </span>
+            <h5>All Tours and Packages start at a Jamnagar.</h5>
+            <br><br>
+            <span>&circledS; Pets : </span>
+            <h5>Pets are Not allowed.</h5>
+            <br> <br>
+            <span>&circledS; Tikets : </span>
+            <h5>Package in inclueded all transportaion in railways.</h5>
+            <br><br>
+            <span>&circledS; Covid Guidelines : </span>
+            <h5> Guidelines of the Center/State Government regarding Covid-19 have to be followed - Please cooperate</h5>
+            <br><br>
+            <span>&circledS; With you  : </span>
+            <h5> Keep Identycard approved by Government.</h5>
+            <br><br>
 
             <br>  
             <br>  

@@ -63,7 +63,7 @@ include './include/sidebar.php';
                 <input type="number" name="packageprice" placeholder="Package Price" required />
               </div>
               <div class="input-style-1">
-                <label>Package Details</label>
+                <label>Package Details (Places)</label>
                 <input type="text" name="packagedetails" placeholder="Package Details" required />
               </div>
 

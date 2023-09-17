@@ -59,7 +59,7 @@
           <li class="nav-item">
             <a href="message.php">
               <span class="icon">
-              <i class="lni lni-question-circle"></i>
+              <i class="lni lni-inbox"></i>
 
               </span>
               <span class="text">Message</span>

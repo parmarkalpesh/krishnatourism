@@ -117,11 +117,9 @@ $all_package = $con->query($sql);
         <ul>
           <li><a>Best Price Guarantee </a></li>
           <li><a>Easy & quick Booking</a></li>
-          <li><a>Best TOur Selection</a></li>
+          <li><a>Best Tour Selection</a></li>
           <li><a>Unique Experience</a></li>
           <li><a>Excellence in Travel </a></li>
-          <li><a>Fully Licenced</a></li>
-
         </ul>
       </div>
 

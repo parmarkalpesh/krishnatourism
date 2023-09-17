@@ -194,7 +194,7 @@ $row = mysqli_fetch_assoc($all_package);
                                                        </div>
                                                        <div class="col-sm-6">
                                                             <div class="form-group">
-                                                                 <span class="form-label"><?php echo $row['packageprice'] ?></span>
+                                                                 <span class="form-label"> &circledS; <?php echo $row['packageprice'] ?></span>
                                                             </div>
                                                        </div>
                                                   </div>
@@ -230,7 +230,7 @@ $row = mysqli_fetch_assoc($all_package);
                                    <td><?php echo $row['packagename'] ?></td>
                                    <td>Jamnagar</td>
                                    <td><?php echo $row['packagelocation'] ?></td>
-                                   <td><?php echo $row['packageprice'] ?> per parson</td>
+                                   <td> &circledS; <?php echo $row['packageprice'] ?> per parson</td>
                               </tr>
 
 
@@ -249,13 +249,30 @@ $row = mysqli_fetch_assoc($all_package);
                          <div class="row">
                               <div class="col-md-2 col-sm-3">
                                    <p class="pjVpProductPolicyTitle">
-                                        <strong>Details</strong>
+                                        <strong>Places</strong>
                                    </p>
                               </div>
                               <div class="col-md-10 col-sm-9">
                                    <p>
-                                        <?php echo  $row['packagedetails'] ?> Travelling all tours strat from Jamnagar.
+                                        <?php echo  $row['packagedetails'] ?> 
                                    </p>
+                              </div>
+                         </div>
+                    </li>
+                    <li class="list-group-item">
+                         <div class="row">
+                              <div class="col-md-2 col-sm-3">
+                                   <p>
+                                        <strong>Facilities</strong>
+                                   </p>
+                              </div>
+
+                              <div class="col-md-10 col-sm-9">
+                                   <div>
+                                        <p>
+                                        24-hour Room Service, Cable / Satellite TV, Chinese dishes, Coffee Maker, Coffee shop, Color TV, Doctor-on-call, Florist, Food, Gift Shop, Hairdryer, Homely Kerala Food, In Room Safe, Internet facility, Iron / Ironing Board, Laundry, Library, Non A/c Room, North Indian Dishes, Refrigerator, Safe Deposit Lockers, South Indian Dishes, Tour Packages, Travel desk, Wi-fi Lobby, Work Desk with Lamp
+                                        </p>
+                                   </div>
                               </div>
                          </div>
                     </li>

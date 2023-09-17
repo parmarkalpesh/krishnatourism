@@ -51,10 +51,10 @@ if (!isset($_SESSION['admin'])) {
                   <div class="profile-info">
                     <div class="info">
                       <h6>Admin </h6>
-                      <div class="image">
+                      <!-- <div class="image">
                         <img src="assets/images/profile/profile-image.png" alt="" />
                         <span class="status"></span>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                   <i class="lni lni-chevron-down"></i>
