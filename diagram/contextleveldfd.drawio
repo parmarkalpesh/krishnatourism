@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net" modified="2023-09-17T13:34:49.329Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="_Hkkr_dCoDereZchVrv3" version="21.7.5" type="device">
+  <diagram name="Page-1" id="oDl0G1bYK95JcyAW3q-e">
+    <mxGraphModel dx="1050" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;User&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="80" y="478" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-3" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Admin&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="840" y="478" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-4" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b style=&quot;font-size: 15px;&quot;&gt;Tourism Management&lt;br style=&quot;font-size: 15px;&quot;&gt;System&lt;/b&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#cdeb8b;strokeColor=#36393d;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="481" y="458" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.05;entryY=0.303;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.006;exitY=0.286;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1" source="DUSPX-gx1iSuCe9rW1VO-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="188" y="500" as="sourcePoint" />
+            <mxPoint x="483" y="500.30000000000007" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-9" value="Request" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=15;" parent="DUSPX-gx1iSuCe9rW1VO-8" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0.057;exitY=0.703;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1" target="DUSPX-gx1iSuCe9rW1VO-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485.8399999999999" y="540.36" as="sourcePoint" />
+            <mxPoint x="198" y="538" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-13" value="Responce" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=15;" parent="DUSPX-gx1iSuCe9rW1VO-12" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.002;entryY=0.284;entryDx=0;entryDy=0;exitX=0.987;exitY=0.357;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" parent="1" source="DUSPX-gx1iSuCe9rW1VO-4" edge="1" target="DUSPX-gx1iSuCe9rW1VO-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="500" as="sourcePoint" />
+            <mxPoint x="880" y="500.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-15" value="Responce" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=15;" parent="DUSPX-gx1iSuCe9rW1VO-14" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.962;entryY=0.691;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="DUSPX-gx1iSuCe9rW1VO-3" target="DUSPX-gx1iSuCe9rW1VO-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="590.5" as="sourcePoint" />
+            <mxPoint x="610" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-17" value="Label" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="DUSPX-gx1iSuCe9rW1VO-16" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUSPX-gx1iSuCe9rW1VO-18" value="Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1;fontSize=15;" parent="DUSPX-gx1iSuCe9rW1VO-16" vertex="1" connectable="0">
+          <mxGeometry x="-0.007" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
