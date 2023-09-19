@@ -3,9 +3,9 @@ include './include/header.php';
 include './include/sidebar.php';
 include '../database/connection.php';
 
-$id = $_GET['packageid'];
+$id = $_GET['id'];
 
-$sql = "SELECT * FROM packages where packageid=$id";
+$sql = "SELECT * FROM packages where id=$id";
 $data = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($data);
 ?>
@@ -37,9 +37,9 @@ $row = mysqli_fetch_assoc($data);
             <!-- end col -->
             <div class="card-style mb-30">
               <h6 class="mb-25">update Package</h6>
-              <form action="./processes/update-package-process.php" method="POST" enctype="multipart/form-data">
+              <form action="./processes/update-package-process.php?id=<?=$id?>" method="POST" enctype="multipart/form-data">
 
-              <input type="hidden" name="id" value="<?= $row['packageid']; ?>" />
+              <input type="hidden" name="id" value="<?= $row['id']; ?>" />
 
                 <div class="input-style-1">
                   <label>Package Name</label>
