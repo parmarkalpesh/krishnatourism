@@ -4,12 +4,18 @@ include './database/connection.php';
 
 $id = $_GET['id'];
 $sql = "SELECT * FROM packages WHERE id=$id";
+
 $all_package = $con->query($sql);
 $row = mysqli_fetch_assoc($all_package);
 ?>
 <!-- <?php
      $user_id = $_SESSION['user_id'];
      ?> -->
+<?php
+$sql = "SELECT * FROM user WHERE id=$user_id";
+$user = $con->query($sql);
+$row = mysqli_fetch_assoc($user);
+?>
 <!-- Page Content -->
 <div class="page-heading header-text">
      <div class="container">
@@ -166,9 +172,9 @@ $row = mysqli_fetch_assoc($all_package);
                                                   <input class="form-control" name="user_id" type="text" value="<?php echo $user_id; ?>" hidden>
                                                   <div class="form-group">
                                                        <span class="form-label">Your Name</span>
-                                                       <input class="form-control" name="name" type="text" placeholder="Enter your name">
+                                                       <input class="form-control" name="name" type="text" value="<?php echo $row['username']; ?> >
                                                   </div>
-                                                  <div class="form-group">
+                                                  <div class=" form-group">
                                                        <span class="form-label">Your Phone Number</span>
                                                        <input class="form-control" id="phonenumber" name="phonenumber" type="text" placeholder="Enter Phone Number" required>
                                                   </div>
@@ -223,7 +229,7 @@ $row = mysqli_fetch_assoc($all_package);
                <h4>Availability &amp; Prices</h4>
 
                <div class="table-responsive">
-                    <table width="100%" border ="0" cellspacing="0" cellpadding="0" class="table">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
                          <thead>
                               <tr>
                                    <th>Package Name</th>

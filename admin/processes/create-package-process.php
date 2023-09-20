@@ -15,9 +15,9 @@ if (isset($_POST["upload"])) {
     $packagelocation = $_POST['packagelocation'];
     $packageprice = $_POST['packageprice'];
     $packagedetails = $_POST['packagedetails'];
-    $file = $_FILES['packageimage'];
     $day = $_POST['day'];
     $night = $_POST['night'];
+    $file = $_FILES['packageimage'];
     $filename = $_FILES["packageimage"]["name"];
     $filepath = $_FILES["packageimage"]["tmp_name"];
 
@@ -26,7 +26,7 @@ if (isset($_POST["upload"])) {
     if (!$con) {
         die("Connection failed: "  . mysqli_connect_error());
     }
-    $sql = "INSERT INTO packages(packagename,packagetitle,packagelocation,packageprice,packagedetails,packageimage,day,night)VALUES('$packagename','$packagetitle','$packagelocation','$packageprice','$packagedetails','$filename','$day','$night')";
+    $sql = "INSERT INTO packages(packagename,packagetitle,packagelocation,packageprice,packagedetails,`day`,night,packageimage)VALUES('$packagename','$packagetitle','$packagelocation','$packageprice','$packagedetails','$day','$night','$filename')";
     if (mysqli_query($con, $sql)) {
         header("Location:../dashboard.php");
         exit();

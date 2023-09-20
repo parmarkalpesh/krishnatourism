@@ -7,11 +7,21 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $confirmpassword = $_POST['confirmpassword'];
 
+$phoneno_format = '/^[0-9]{10}$/';
+if (!preg_match($phoneno_format, $phonenumber)) {
+    echo "<script>
+    alert('invalid phone number');
+    window.location.href='../register.php';
+    </script>";
+    return;
+}
 if ($password == $confirmpassword) {
     $quary = "INSERT INTO user(`username`,phonenumber,email,`password`) VALUES('$username','$phonenumber','$email','$password')";
     $data = mysqli_query($con, $quary);
     header("Location:../login.php");
-} else {
+}
+
+else {
 
     echo "<script>
     alert('Password Not Match');

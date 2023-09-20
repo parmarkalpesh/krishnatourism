@@ -19,6 +19,8 @@ CREATE TABLE `packages`
     `packagelocation` VARCHAR(50) NOT NULL,
     `packagedetails` VARCHAR(50) NOT NULL,
     `packagetitle` VARCHAR(50) NOT NULL,
+    `day` INT NOT NULL,
+    `night` INT NOT NULL,
     `packageimage` VARCHAR(200) NOT NULL
 );
 
@@ -36,15 +38,13 @@ CREATE TABLE `booking`
 (
     `id` INT PRIMARY KEY AUTO_INCREMENT,
     `user_id` INT NOT NULL,
-    `user_id` INT NOT NULL,
+    `package_id` INT NOT NULL,
     `name` VARCHAR(20) NOT NULL,
     `phonenumber` VARCHAR(20) NOT NULL,
     `date` VARCHAR(50) NOT NULL,
     `countpeople` VARCHAR(50) NOT NULL,
     `totalamount` VARCHAR(50) NOT NULL,
     `status` VARCHAR(50) NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user(id)
-
-
-
+    FOREIGN KEY (user_id) REFERENCES user(id),
+    FOREIGN KEY (package_id) REFERENCES packages(id)
 );
