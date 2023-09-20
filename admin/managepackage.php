@@ -87,12 +87,12 @@ include '../database/connection.php';
           <td>" . $row['packagedetails'] . "</td>
           <td><img src= './upload/" . $row['packageimage'] . "' height='100px' width='100px'></td>
           <td>
-          <form action='./update-package.php?packageid=$row[id]' method='post'>                              
+          <form action='./update-package.php?id=$row[id]' method='post'>                              
           <input type='submit' class='btn btn-primary' value='Update' />
           </form>
           <td/>
           <td>
-          <form action='./processes/delete-packege.php?packageid=$row[id]'method='post' >
+          <form action='./processes/delete-packege.php?id=$row[id]'method='post' >
           <input type='submit'  class='btn btn-danger' value='Delete' />
           </td>
           </form>

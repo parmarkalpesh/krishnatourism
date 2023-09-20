@@ -66,6 +66,14 @@ include './include/sidebar.php';
                 <label>Package Details (Places)</label>
                 <input type="text" name="packagedetails" placeholder="Package Details" required />
               </div>
+              <div class="input-style-1">
+                <label>Day</label>
+                <input type="text" name="day" placeholder="Day" required />
+              </div>
+              <div class="input-style-1">
+                <label>Night</label>
+                <input type="text" name="night" placeholder="Night" required />
+              </div>
 
               <div class="input-style-1">
                 <label>Package image</label>

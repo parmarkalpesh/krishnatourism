@@ -7,7 +7,7 @@ $dbname = "tms";
 $con = mysqli_connect($servername, $username, $password, $dbname);
 
 
-$id = $_GET['packageid'];
+$id = $_GET['id'];
 $packagename = $_POST['packagename'];
 $packagelocation = $_POST['packagelocation'];
 $packageprice = $_POST['packageprice'];
@@ -28,19 +28,19 @@ if($filename != '')
     packageprice='$packageprice',
     packagedetails='$packagedetails',
     packageimage='$update_filename'
-    WHERE packageid = $id";
+    WHERE id = $id";
 
     mysqli_query($con,$sql);
     unlink("../upload/".$packageimageold);
 }
 else
 {
-    $sql = "UPDATE package SET  
+    $sql = "UPDATE packages SET  
     packagename='$packagename',
     packagelocation='$packagelocation',
     packageprice='$packageprice',
     packagedetails='$packagedetails'
-    WHERE packageid = $id";
+    WHERE id = $id";
 
     $data=mysqli_query($con,$sql);
 }
