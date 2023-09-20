@@ -11,11 +11,7 @@ $row = mysqli_fetch_assoc($all_package);
 <!-- <?php
      $user_id = $_SESSION['user_id'];
      ?> -->
-<?php
-$sql = "SELECT * FROM user WHERE id=$user_id";
-$user = $con->query($sql);
-$row = mysqli_fetch_assoc($user);
-?>
+
 <!-- Page Content -->
 <div class="page-heading header-text">
      <div class="container">
@@ -170,9 +166,12 @@ $row = mysqli_fetch_assoc($user);
                                              <hr>
                                              <form method="post" action="./process/booking-process.php">
                                                   <input class="form-control" name="user_id" type="text" value="<?php echo $user_id; ?>" hidden>
+                                                  <input class="form-control" name="package_id" type="text" value="<?php echo $id ?>" hidden>
+
                                                   <div class="form-group">
                                                        <span class="form-label">Your Name</span>
-                                                       <input class="form-control" name="name" type="text" value="<?php echo $row['username']; ?> >
+                                                       <input class="form-control" name="name" type="text" id="name" placeholder="Enter Phone Number" required>
+
                                                   </div>
                                                   <div class=" form-group">
                                                        <span class="form-label">Your Phone Number</span>
@@ -183,22 +182,17 @@ $row = mysqli_fetch_assoc($user);
                                                        <div class="col-sm-6">
                                                             <div class="form-group">
                                                                  <span class="form-label">Select Date</span>
-                                                                 <input class="form-control" name="date" type="date">
+                                                                 <input class="form-control" name="date" type="date" id="datePicker" required>
                                                             </div>
                                                        </div>
+
                                                        <div class="col-sm-6">
                                                             <div class="form-group">
                                                                  <span class="form-label">No. of Traveller</span>
-                                                                 <input class="form-control" name="countpeople" type="text" onkeyup="mult(this.value);">
+                                                                 <input class="form-control" name="countpeople" type="text" onkeyup="mult(this.value);" required>
                                                             </div>
                                                        </div>
-                                                       <script>
-                                                            function mult(value) {
-                                                                 var x;
-                                                                 x = <?php echo $row['packageprice'] ?> * value;
-                                                                 document.getElementById('total').value = x;
-                                                            }
-                                                       </script>
+
                                                   </div>
                                                   <div class="row">
                                                   </div>
@@ -422,5 +416,23 @@ $row = mysqli_fetch_assoc($user);
           <br>
      </div>
 </div>
+<script>
+     function getCurrentDate() {
+          const today = new Date();
+          const year = today.getFullYear();
+          const month = String(today.getMonth() + 1).padStart(2, '0');
+          const day = String(today.getDate()).padStart(2, '0');
+          return `${year}-${month}-${day}`;
+     }
+
+     const datePicker = document.getElementById("datePicker");
+     datePicker.setAttribute("min", getCurrentDate());
+
+     function mult(value) {
+          var x;
+          x = <?php echo $row['packageprice'] ?> * value;
+          document.getElementById('total').value = x;
+     }
+</script>
 
 <?php include './includes/footer.php'; ?>

@@ -21,7 +21,7 @@ include './includes/header.php';
               <i class="fa fa-phone"></i>
               <h4>Phone</h4>
               <p>Connect to us with missed call<br>Request a call back</p>
-              <a href="#">+91 63531 90500</a>
+              <a href="#">+91 63531 90501</a>
             </div>
           </div>
           <div class="col-md-4">
@@ -36,7 +36,7 @@ include './includes/header.php';
             <div class="contact-item">
               <i class="fa fa-map-marker"></i>
               <h4>Location</h4>
-              <p>46, Madhushudan Complex, Near Jakatnak,<br> Jamanagar - 361004. </p>
+              <p>46, Madhushudan Complex, Near Samrpan,<br> Jamanagar - 361004. </p>
               <a href="#">View on Google Maps</a>
             </div>
           </div>
@@ -50,7 +50,6 @@ include './includes/header.php';
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Send us a <em>message</em></h2>
-              <!-- <span>Suspendisse a ante in neque iaculis lacinia</span> -->
             </div>
           </div>
           <div class="col-md-12">

@@ -12,6 +12,8 @@ $packagename = $_POST['packagename'];
 $packagelocation = $_POST['packagelocation'];
 $packageprice = $_POST['packageprice'];
 $packagedetails = $_POST['packagedetails'];
+$day = $_POST['day'];
+$night = $_POST['night'];
 
 $filename = $_FILES['packageimage']['name'];
 $filepath = $_FILES["packageimage"]['tmp_name'];
@@ -27,6 +29,8 @@ if($filename != '')
     packagelocation='$packagelocation',
     packageprice='$packageprice',
     packagedetails='$packagedetails',
+    `day` ='$day',
+    night='$night',
     packageimage='$update_filename'
     WHERE id = $id";
 
@@ -39,7 +43,9 @@ else
     packagename='$packagename',
     packagelocation='$packagelocation',
     packageprice='$packageprice',
-    packagedetails='$packagedetails'
+    packagedetails='$packagedetails',
+    `day` ='$day',
+    night='$night'
     WHERE id = $id";
 
     $data=mysqli_query($con,$sql);

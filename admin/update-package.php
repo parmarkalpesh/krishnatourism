@@ -58,6 +58,14 @@ $row = mysqli_fetch_assoc($data);
                   <textarea name="packagedetails" ><?= $row['packagedetails']; ?> </textarea>
                 </div>
                 <div class="input-style-1">
+                <label>Day</label>
+                <input type="text" name="day" value="<?= $row['day']; ?>"   />
+              </div>
+              <div class="input-style-1">
+                <label>Night</label>
+                <input type="text" name="night" value="<?= $row['night']?>" />
+              </div>
+                <div class="input-style-1">
                   <label>Package image</label>
                   <img src="./upload/<?php echo $row['packageimage'] ?>" width="100px;" >
                   <input type="file" name="packageimage"  />

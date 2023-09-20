@@ -48,7 +48,10 @@ include '../database/connection.php';
                 <thead>
                   <tr>
                     <th>
-                      <h6>Name</h6>
+                      <h6>Username</h6>
+                    </th>
+                    <th>
+                      <h6>Booking Name</h6>
                     </th>
                     <th>
                       <h6>Phone Number</h6>
@@ -73,6 +76,7 @@ include '../database/connection.php';
 
                     while ($row = mysqli_fetch_assoc($data)) {
                       echo "  <tr>
+                      <td>" . "</td>
                                     <td>" . $row['name'] . "</td>
                                     <td>" . $row['phonenumber'] . "</td>
                                     <td>" . $row['date'] . "</td>

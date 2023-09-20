@@ -5,11 +5,13 @@ session_start();
 <?php
 include '../database/connection.php';
 $user_id = $_POST['user_id'];
+$package_id = $_POST['package_id'];
 $name = $_POST['name'];
 $phonenumber = $_POST['phonenumber'];
 $date = $_POST['date'];
 $countpeople = $_POST['countpeople'];
 $totalamount = $_POST['totalamount'];
+
 
 
 if (!isset($_SESSION['tms'])) {
@@ -19,7 +21,7 @@ if (!isset($_SESSION['tms'])) {
     </script>";
 } else {
 
-    $quary = "INSERT INTO booking(`user_id`,`name`,phonenumber,`date`,`countpeople`,`totalamount`) VALUES('$user_id','$name','$phonenumber','$date','$countpeople','$totalamount')";
+    $quary = "INSERT INTO booking(`user_id`,`package_id`,`name`,phonenumber,`date`,`countpeople`,`totalamount`) VALUES('$user_id','$package_id','$name','$phonenumber','$date','$countpeople','$totalamount')";
     $data = mysqli_query($con, $quary);
     header("Location:../index.php");
 }

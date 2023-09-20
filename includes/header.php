@@ -41,7 +41,7 @@ session_start();
         <div class="col-md-8 col-xs-12">
           <ul class="left-info">
             <li><a><i class="fa fa-envelope"></i>contact@krishnatourism.com</a></li>
-            <li><a><i class="fa fa-phone"></i>6353190500</a></li>
+            <li><a><i class="fa fa-phone"></i>6353190501</a></li>
           </ul>
         </div>
         <div class="col-md-4">
