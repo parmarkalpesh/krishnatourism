@@ -36,6 +36,7 @@ CREATE TABLE `booking`
 (
     `id` INT PRIMARY KEY AUTO_INCREMENT,
     `user_id` INT NOT NULL,
+    `user_id` INT NOT NULL,
     `name` VARCHAR(20) NOT NULL,
     `phonenumber` VARCHAR(20) NOT NULL,
     `date` VARCHAR(50) NOT NULL,
