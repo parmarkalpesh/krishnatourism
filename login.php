@@ -188,7 +188,7 @@
                 <br />
               </form>
               <form action="./index.php">
-                <input type="submit" value="Cancle" class="btn text-white btn-block btn-danger" />
+                <input type="submit" value="Cancel" class="btn text-white btn-block btn-danger" />
               </form>
 
               <span class="d-block text-left my-4 text-muted">

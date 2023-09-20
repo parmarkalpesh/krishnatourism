@@ -1,12 +1,15 @@
 <?php include './includes/header.php';
 include './database/connection.php';
 
+
 $id = $_GET['id'];
 $sql = "SELECT * FROM packages WHERE id=$id";
 $all_package = $con->query($sql);
 $row = mysqli_fetch_assoc($all_package);
-
 ?>
+<!-- <?php
+     $user_id = $_SESSION['user_id'];
+     ?> -->
 <!-- Page Content -->
 <div class="page-heading header-text">
      <div class="container">
@@ -160,41 +163,46 @@ $row = mysqli_fetch_assoc($all_package);
                                              <h5 class="form-group">Tour Booking Details</h5>
                                              <hr>
                                              <form method="post" action="./process/booking-process.php">
+                                                  <input class="form-control" name="user_id" type="text" value="<?php echo $user_id; ?>" hidden>
                                                   <div class="form-group">
                                                        <span class="form-label">Your Name</span>
                                                        <input class="form-control" name="name" type="text" placeholder="Enter your name">
                                                   </div>
                                                   <div class="form-group">
                                                        <span class="form-label">Your Phone Number</span>
-                                                       <input class="form-control" name="phonenumber" type="text" placeholder="Enter Phone Number">
+                                                       <input class="form-control" id="phonenumber" name="phonenumber" type="text" placeholder="Enter Phone Number" required>
                                                   </div>
                                                   <hr>
                                                   <div class="row">
                                                        <div class="col-sm-6">
                                                             <div class="form-group">
                                                                  <span class="form-label">Select Date</span>
-                                                                 <input class="form-control" name="date" type="date" required>
+                                                                 <input class="form-control" name="date" type="date">
                                                             </div>
                                                        </div>
                                                        <div class="col-sm-6">
                                                             <div class="form-group">
                                                                  <span class="form-label">No. of Traveller</span>
-                                                                 <input class="form-control" name="countpeople" type="" required>
+                                                                 <input class="form-control" name="countpeople" type="text" onkeyup="mult(this.value);">
                                                             </div>
                                                        </div>
-                                                       
+                                                       <script>
+                                                            function mult(value) {
+                                                                 var x;
+                                                                 x = <?php echo $row['packageprice'] ?> * value;
+                                                                 document.getElementById('total').value = x;
+                                                            }
+                                                       </script>
                                                   </div>
                                                   <div class="row">
-                                                  </div><hr>
+                                                  </div>
+                                                  <hr>
                                                   <div class="row">
-                                                       <div class="col-sm-6">
+                                                       <div class="col-sm-12">
                                                             <div class="form-group">
                                                                  <span class="form-label">Total Amount</span>
-                                                            </div>
-                                                       </div>
-                                                       <div class="col-sm-6">
-                                                            <div class="form-group">
-                                                                 <span class="form-label"> &circledS; <?php echo $row['packageprice'] ?></span>
+                                                                 <input class="form-control" name="totalamount" type="text" id="total" readonly>
+
                                                             </div>
                                                        </div>
                                                   </div>
@@ -245,7 +253,7 @@ $row = mysqli_fetch_assoc($all_package);
                <h4>INFO</h4>
 
                <ul class="list-group list-group-no-border">
-               <li class="list-group-item">
+                    <li class="list-group-item">
                          <div class="row">
                               <div class="col-md-2 col-sm-3">
                                    <p class="pjVpProductPolicyTitle">
@@ -254,7 +262,7 @@ $row = mysqli_fetch_assoc($all_package);
                               </div>
                               <div class="col-md-10 col-sm-9">
                                    <p>
-                                        <?php echo  $row['packagedetails'] ?> 
+                                        <?php echo  $row['packagedetails'] ?>
                                    </p>
                               </div>
                          </div>
@@ -270,7 +278,7 @@ $row = mysqli_fetch_assoc($all_package);
                               <div class="col-md-10 col-sm-9">
                                    <div>
                                         <p>
-                                        24-hour Room Service, Cable / Satellite TV, Chinese dishes, Coffee Maker, Coffee shop, Color TV, Doctor-on-call, Florist, Food, Gift Shop, Hairdryer, Homely Kerala Food, In Room Safe, Internet facility, Iron / Ironing Board, Laundry, Library, Non A/c Room, North Indian Dishes, Refrigerator, Safe Deposit Lockers, South Indian Dishes, Tour Packages, Travel desk, Wi-fi Lobby, Work Desk with Lamp
+                                             24-hour Room Service, Cable / Satellite TV, Chinese dishes, Coffee Maker, Coffee shop, Color TV, Doctor-on-call, Florist, Food, Gift Shop, Hairdryer, Homely Kerala Food, In Room Safe, Internet facility, Iron / Ironing Board, Laundry, Library, Non A/c Room, North Indian Dishes, Refrigerator, Safe Deposit Lockers, South Indian Dishes, Tour Packages, Travel desk, Wi-fi Lobby, Work Desk with Lamp
                                         </p>
                                    </div>
                               </div>

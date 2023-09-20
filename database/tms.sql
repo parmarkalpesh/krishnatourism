@@ -35,10 +35,15 @@ CREATE TABLE `contectmessage`
 CREATE TABLE `booking`
 (
     `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `user_id` INT NOT NULL,
     `name` VARCHAR(20) NOT NULL,
     `phonenumber` VARCHAR(20) NOT NULL,
     `date` VARCHAR(50) NOT NULL,
     `countpeople` VARCHAR(50) NOT NULL,
-    `totalprice` VARCHAR(50) NOT NULL,
-    `status` VARCHAR(50) NOT NULL
+    `totalamount` VARCHAR(50) NOT NULL,
+    `status` VARCHAR(50) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user(id)
+
+
+
 );
