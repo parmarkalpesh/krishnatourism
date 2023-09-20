@@ -173,8 +173,8 @@ $row = mysqli_fetch_assoc($all_package);
                                                        <div class="col-sm-6">
                                                             <div class="form-group">
                                                                  <span class="form-label">Select Date</span>
-                                                                 <input class="form-control" name="date" type="date" required>
-                                                            </div>
+                                                                 <input class="form-control"  id="inputdate" name="inputdate" type="date" required>
+                                                              </div>
                                                        </div>
                                                        <div class="col-sm-6">
                                                             <div class="form-group">
@@ -182,10 +182,11 @@ $row = mysqli_fetch_assoc($all_package);
                                                                  <input class="form-control" name="countpeople" type="" required>
                                                             </div>
                                                        </div>
-                                                       
+
                                                   </div>
                                                   <div class="row">
-                                                  </div><hr>
+                                                  </div>
+                                                  <hr>
                                                   <div class="row">
                                                        <div class="col-sm-6">
                                                             <div class="form-group">
@@ -245,7 +246,7 @@ $row = mysqli_fetch_assoc($all_package);
                <h4>INFO</h4>
 
                <ul class="list-group list-group-no-border">
-               <li class="list-group-item">
+                    <li class="list-group-item">
                          <div class="row">
                               <div class="col-md-2 col-sm-3">
                                    <p class="pjVpProductPolicyTitle">
@@ -254,10 +255,28 @@ $row = mysqli_fetch_assoc($all_package);
                               </div>
                               <div class="col-md-10 col-sm-9">
                                    <p>
-                                        <?php echo  $row['packagedetails'] ?> 
+                                        <?php echo  $row['packagedetails'] ?>
                                    </p>
                               </div>
                          </div>
+
+
+                    </li>
+                    <li class="list-group-item">
+                         <div class="row">
+                              <div class="col-md-2 col-sm-3">
+                                   <p class="pjVpProductPolicyTitle">
+                                        <strong>Day/Night</strong>
+                                   </p>
+                              </div>
+                              <div class="col-md-10 col-sm-9">
+                                   <p>
+                                        <?php echo  $row['day'] ?> Day / <?php echo  $row['night'] ?> Night
+                                   </p>
+                              </div>
+                         </div>
+
+
                     </li>
                     <li class="list-group-item">
                          <div class="row">
@@ -270,7 +289,7 @@ $row = mysqli_fetch_assoc($all_package);
                               <div class="col-md-10 col-sm-9">
                                    <div>
                                         <p>
-                                        24-hour Room Service, Cable / Satellite TV, Chinese dishes, Coffee Maker, Coffee shop, Color TV, Doctor-on-call, Florist, Food, Gift Shop, Hairdryer, Homely Kerala Food, In Room Safe, Internet facility, Iron / Ironing Board, Laundry, Library, Non A/c Room, North Indian Dishes, Refrigerator, Safe Deposit Lockers, South Indian Dishes, Tour Packages, Travel desk, Wi-fi Lobby, Work Desk with Lamp
+                                             24-hour Room Service, Cable / Satellite TV, Chinese dishes, Coffee Maker, Coffee shop, Color TV, Doctor-on-call, Florist, Food, Gift Shop, Hairdryer, Homely Kerala Food, In Room Safe, Internet facility, Iron / Ironing Board, Laundry, Library, Non A/c Room, North Indian Dishes, Refrigerator, Safe Deposit Lockers, South Indian Dishes, Tour Packages, Travel desk, Wi-fi Lobby, Work Desk with Lamp
                                         </p>
                                    </div>
                               </div>
@@ -355,6 +374,7 @@ $row = mysqli_fetch_assoc($all_package);
                                         </p>
                                    </div>
                               </div>
+
                          </div>
                     </li>
                     <li class="list-group-item">
