@@ -154,6 +154,12 @@
       text-decoration: underline;
     }
 
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      /* Chrome, Safari, Edge, Opera */
+      -webkit-appearance: none;
+    }
+
     .content .btn {
       height: 54px;
       padding-left: 30px;
@@ -173,37 +179,37 @@
               <div class="mb-4">
                 <h3>Register to<strong>KrishnaTourism</strong></h3>
                 <p class="mb-4">
-                Welcome Krishna Tourism !!
+                  Welcome Krishna Tourism !!
                 </p>
               </div>
               <form action="./process/register-process.php" method="post">
                 <div class="form-group first">
-                  <input type="text" class="form-control" name="username" placeholder="Username" required/>
+                  <input type="text" class="form-control" name="username" placeholder="Username" required />
                 </div>
                 <div class="form-group last mb-4">
-                  <input type="number" class="form-control" name="phonenumber" placeholder="Phone Number" required/>
+                  <input type="number" class="form-control" name="phonenumber" placeholder="Phone Number" required />
                 </div>
                 <div class="form-group last mb-4">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required/>
+                  <input type="email" class="form-control" name="email" placeholder="Email" required />
                 </div>
                 <div class="form-group last mb-4">
-                  <input type="password" class="form-control" name="password" placeholder="Password" required/>
+                  <input type="password" class="form-control" name="password" placeholder="Password" required />
                 </div>
                 <div class="form-group last mb-4">
-                  <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password" required/>
+                  <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password" required />
                 </div>
 
-                <input type="submit" value="Register" class="btn text-white btn-block btn-primary" required/>
+                <input type="submit" value="Register" class="btn text-white btn-block btn-primary" required />
               </form>
 
-                <br />
-               <form action="./index.php">
+              <br />
+              <form action="./index.php">
 
-                 <input type="submit" value="Cancle" class="btn text-white btn-block btn-danger" />
-               </form>
-             
-                <span class="d-block text-left my-4 text-muted">
-                  I have alredy Account  <a href="./login.php">Login Now</a></span>
+                <input type="submit" value="Cancle" class="btn text-white btn-block btn-danger" />
+              </form>
+
+              <span class="d-block text-left my-4 text-muted">
+                I have alredy Account <a href="./login.php">Login Now</a></span>
             </div>
           </div>
         </div>

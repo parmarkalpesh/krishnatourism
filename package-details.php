@@ -170,12 +170,17 @@ $row = mysqli_fetch_assoc($all_package);
 
                                                   <div class="form-group">
                                                        <span class="form-label">Your Name</span>
-                                                       <input class="form-control" name="name" type="text" id="name" placeholder="Enter Phone Number" required>
+                                                       <input class="form-control" name="name" type="text" id="name"  placeholder="Enter Phone Name" >
 
                                                   </div>
                                                   <div class=" form-group">
+                                                       <!-- <?php
+                                                       // $sql = "SELECT * FROM user WHERE id=$user_id";
+                                                       // $result = $con->query($sql);
+                                                       // $row = mysqli_fetch_assoc($result);
+                                                       ?> -->
                                                        <span class="form-label">Your Phone Number</span>
-                                                       <input class="form-control" id="phonenumber" name="phonenumber" type="text" placeholder="Enter Phone Number" required>
+                                                       <input class="form-control" id="phonenumber" name="phonenumber"type="text" placeholder="Enter Phone Number" >
                                                   </div>
                                                   <hr>
                                                   <div class="row">
@@ -238,7 +243,7 @@ $row = mysqli_fetch_assoc($all_package);
                                    <td><?php echo $row['packagename'] ?></td>
                                    <td>Jamnagar</td>
                                    <td><?php echo $row['packagelocation'] ?></td>
-                                   <td> &circledS; <?php echo $row['packageprice'] ?> per parson</td>
+                                   <td> &circledR; <?php echo $row['packageprice'] ?> per parson</td>
                               </tr>
 
 

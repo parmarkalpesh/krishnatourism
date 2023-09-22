@@ -4,6 +4,12 @@ include './include/sidebar.php';
 include '../database/connection.php';
 ?>
 
+<?php
+$user_id = $_SESSION['user_id'];
+$user_name = $_SESSION['tms'];
+?>
+
+
 
 <!-- ========== tab components start ========== -->
 <section class="tab-components">
@@ -54,13 +60,22 @@ include '../database/connection.php';
                       <h6>Booking Name</h6>
                     </th>
                     <th>
+                      <h6>Package Name</h6>
+                    </th>
+                    <th>
                       <h6>Phone Number</h6>
                     </th>
                     <th>
                       <h6>Tour Date</h6>
                     </th>
                     <th>
-                      <h6>No .of Traveller</h6>
+                      <h6>No of Traveller</h6>
+                    </th>
+                    <th>
+                      <h6>Totalprice</h6>
+                    </th>
+                    <th>
+                      <h6>Status</h6>
                     </th>
                     <th width="15%">
                       <h6>Action</h6>
@@ -71,23 +86,29 @@ include '../database/connection.php';
                 <tbody>
                   <tr>
                     <?php
-                    $sql = "SELECT * FROM booking";
-                    $data = mysqli_query($con, $sql);
 
+
+
+                    // $sql = "SELECT user.username,packages.packagename as username,pname,booking.name,booking.phonenumber,booking.date,booking.countpeople,booking.totalamount FROM user,packages,booking where user.id=booking.user_id and packages.id=booking.package_id";
+                    $sql = "SELECT user_name.username as username, packages.packagename as pname, booking.name, booking.phonenumber, booking.date, booking.countpeople, booking.totalamount, booking.status 
+                      FROM user AS user_name, user AS user_id, packages, booking 
+                      WHERE user_name.id = booking.user_id AND user_id.id = booking.user_id AND packages.id = booking.package_id";
+                    $data = mysqli_query($con, $sql);
                     while ($row = mysqli_fetch_assoc($data)) {
                       echo "  <tr>
-                      <td>" . "</td>
+                                    <td>" . $row['username'] . "</td>
                                     <td>" . $row['name'] . "</td>
+                                    <td>" . $row['pname'] . "</td>
                                     <td>" . $row['phonenumber'] . "</td>
                                     <td>" . $row['date'] . "</td>
                                     <td>" . $row['countpeople'] . "</td>
+                                    <td>" . $row['totalamount'] . "</td>
+                                    <td>" . $row['status'] . "</td>
                                     <td>
-                                    <form  >
-                                    <input type='submit'  class='btn btn-primary' value='Aprove' />
-
-                                    <input type='submit'  class='btn btn-danger' value='Cancle' />
+                                      <input type='submit'  class='btn btn-primary' value='Aprove' />
+                                      <input type='submit'  class='btn btn-danger' value='Cancle' />
                                     </td>
-                                    </tr>";
+                                </tr>";
                     }
                     ?>
 

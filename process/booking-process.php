@@ -21,7 +21,7 @@ if (!isset($_SESSION['tms'])) {
     </script>";
 } else {
 
-    $quary = "INSERT INTO booking(`user_id`,`package_id`,`name`,phonenumber,`date`,`countpeople`,`totalamount`) VALUES('$user_id','$package_id','$name','$phonenumber','$date','$countpeople','$totalamount')";
+    $quary = "INSERT INTO booking(`user_id`,`package_id`,`name`,phonenumber,`date`,`countpeople`,`totalamount`,`status`) VALUES('$user_id','$package_id','$name','$phonenumber','$date','$countpeople','$totalamount','pending')";
     $data = mysqli_query($con, $quary);
     header("Location:../index.php");
 }
