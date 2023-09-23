@@ -25,7 +25,7 @@ $row = mysqli_fetch_assoc($data);
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                      <a href="dashbord.php">Dashboard</a>
+                      <a href="dashboard.php">Dashboard</a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="Create Package">
                       Update Package
