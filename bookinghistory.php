@@ -82,11 +82,9 @@
                       <td>" . $row['status'] . "</td>
                       <td>
                       <form action='./process/cancel-booking.php?id=$row[id]' method='post'>                              
-                      <input type='submit' id='cancle' class='btn btn-danger' name='submit' value='Cancel' />
+                      <input type='submit' id='cancle' class='btn btn-danger'  onclick='hideButton(this)' name='submit' value='Cancel' />
                         </form>
                       </td>
-                 
-                      
                   </tr>";
           }
           ?>
@@ -108,6 +106,13 @@
  <br>
 
  <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+function hideButton(cancle)
+{
+  cancle.style.display ='none';
+}
+  </script>
+ 
  <?php
   include './includes/footer.php';
   ?>

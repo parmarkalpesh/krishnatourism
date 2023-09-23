@@ -90,7 +90,7 @@ $user_name = $_SESSION['tms'];
 
 
                     // $sql = "SELECT user.username,packages.packagename as username,pname,booking.name,booking.phonenumber,booking.date,booking.countpeople,booking.totalamount FROM user,packages,booking where user.id=booking.user_id and packages.id=booking.package_id";
-                    $sql = "SELECT user_name.username as username, packages.packagename as pname, booking.name, booking.phonenumber, booking.date, booking.countpeople, booking.totalamount, booking.status 
+                    $sql = "SELECT user_name.username as username, packages.packagename as pname, booking.name,booking.id, booking.phonenumber, booking.date, booking.countpeople, booking.totalamount, booking.status 
                       FROM user AS user_name, user AS user_id, packages, booking 
                       WHERE user_name.id = booking.user_id AND user_id.id = booking.user_id AND packages.id = booking.package_id";
                     $data = mysqli_query($con, $sql);
@@ -105,9 +105,15 @@ $user_name = $_SESSION['tms'];
                                     <td>" . $row['totalamount'] . "</td>
                                     <td>" . $row['status'] . "</td>
                                     <td>
+                                    <form action='./processes/booking-processs.php?id=$row[id]' method='post'>
                                       <input type='submit'  class='btn btn-primary' value='Aprove' />
-                                      <input type='submit'  class='btn btn-danger' value='Cancle' />
+                                      </form>
                                     </td>
+                                      <td>
+                                      <form action='./processes/booking-process.php?id=$row[id]' method='post'>
+                                      <input type='submit'  class='btn btn-danger' value='Cancle' />
+                                      </form>
+                                      </td>
                                 </tr>";
                     }
                     ?>
