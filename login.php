@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css" />
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css" />
+  <link rel="icon" href="./assets/images/logo.png" type="image/x-icon">
   <title>Login Now</title>
 </head>
 

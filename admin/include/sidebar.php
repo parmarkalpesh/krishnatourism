@@ -2,7 +2,7 @@
 <aside class="sidebar-nav-wrapper">
       <div class="navbar-logo">
         <a href="./dashboard.php">
-          <img src="assets/images/logo/logo.svg" alt="logo" />
+          <img src="./assets/images/logo/logo.png" alt="logo" style="height: 100px; width: 150px; " />
         </a>
       </div>
       <nav class="sidebar-nav">

@@ -10,7 +10,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+  <link rel="icon" href="./assets/images/logo.png" type="image/x-icon">
   <title>Welcome to Krishna Tourism</title>
 
   <!-- Bootstrap core CSS -->
@@ -47,8 +47,8 @@ session_start();
         <div class="col-md-4">
           <ul class="right-icons">
             <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="http://linkedin.com"><i class="fa fa-linkedin"></i></a></li>
           </ul>
         </div>
       </div>
@@ -58,7 +58,8 @@ session_start();
   <header class="">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
+          
           <h2>Krishna Tourism </h2>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

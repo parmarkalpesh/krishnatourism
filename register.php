@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="icon" href="./assets/images/logo.png" type="image/x-icon">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css" />
   <title>Register Now</title>
