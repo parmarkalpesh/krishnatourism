@@ -71,6 +71,11 @@ $row = mysqli_fetch_assoc($all_package);
                          font-size: 14px;
                     }
 
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                         -webkit-appearance: none;
+                    }
+
                     .booking-form .form-control::-webkit-input-placeholder {
                          color: rgba(62, 72, 92, 0.3);
                     }
@@ -170,17 +175,18 @@ $row = mysqli_fetch_assoc($all_package);
 
                                                   <div class="form-group">
                                                        <span class="form-label">Your Name</span>
-                                                       <input class="form-control" name="name" type="text" id="name"  placeholder="Enter Phone Name" >
+                                                       <input class="form-control" name="name" type="text" id="name" placeholder="Enter Phone Name">
 
                                                   </div>
                                                   <div class=" form-group">
                                                        <!-- <?php
-                                                       // $sql = "SELECT * FROM user WHERE id=$user_id";
-                                                       // $result = $con->query($sql);
-                                                       // $row = mysqli_fetch_assoc($result);
-                                                       ?> -->
+                                                            // $sql = "SELECT * FROM user WHERE id=$user_id";
+                                                            // $result = $con->query($sql);
+                                                            // $row = mysqli_fetch_assoc($result);
+                                                            ?> -->
                                                        <span class="form-label">Your Phone Number</span>
-                                                       <input class="form-control" id="phonenumber" name="phonenumber"type="text" placeholder="Enter Phone Number" >
+                                                       <input class="form-control" id="phonenumber" name="phonenumber" type="number" placeholder="Enter Phone Number">
+
                                                   </div>
                                                   <hr>
                                                   <div class="row">
