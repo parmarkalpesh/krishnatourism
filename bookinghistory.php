@@ -66,12 +66,13 @@
        <!-- end table row -->
      </thead>
      <tbody>
-       <form method="POST" action="./process/bookinghistory-process.php" <tr>
+       <form method="POST" action="./process/bookinghistory-process.php" >
          <?php
-          $sql = "SELECT packages.packagename as pname,booking.name,booking.date,booking.countpeople,booking.totalamount,booking.status FROM packages,booking where packages.id=booking.package_id and user_id=$user_id";
+          $sql = "SELECT packages.packagename as pname,booking.id,booking.name,booking.date,booking.countpeople,booking.totalamount,booking.status FROM packages,booking where packages.id=booking.package_id and user_id=$user_id";
           $data = mysqli_query($con, $sql);
           while ($row = mysqli_fetch_assoc($data)) {
             echo "  <tr>
+                      <input type='hidden' value=' . $row[id] . ' id='id' name='id'>
                       <td>$user_name</td>
                       <td>" . $row['name'] . "</td>
                       <td>" . $row['pname'] . "</td>
