@@ -66,7 +66,7 @@
        <!-- end table row -->
      </thead>
      <tbody>
-       <form method="POST" action="./process/bookinghistory-process.php" >
+       <!-- <form > -->
          <?php
           $sql = "SELECT packages.packagename as pname,booking.id,booking.name,booking.date,booking.countpeople,booking.totalamount,booking.status FROM packages,booking where packages.id=booking.package_id and user_id=$user_id";
           $data = mysqli_query($con, $sql);
@@ -81,14 +81,17 @@
                       <td>" . $row['totalamount'] . "</td>
                       <td>" . $row['status'] . "</td>
                       <td>
-                        <input type='submit' id='cancle' class='btn btn-danger' value='Cancle' />
+                      <form action='./process/cancel-booking.php?id=$row[id]' method='post'>                              
+                      <input type='submit' id='cancle' class='btn btn-danger' name='submit' value='Cancel' />
+                        </form>
                       </td>
+                 
                       
                   </tr>";
           }
           ?>
          </tr>
-       </form>
+       <!-- </form> -->
        <!-- end table row -->
      </tbody>
    </table>

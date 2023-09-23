@@ -23,5 +23,8 @@ if (!isset($_SESSION['tms'])) {
 
     $quary = "INSERT INTO booking(`user_id`,`package_id`,`name`,phonenumber,`date`,`countpeople`,`totalamount`,`status`) VALUES('$user_id','$package_id','$name','$phonenumber','$date','$countpeople','$totalamount','pending')";
     $data = mysqli_query($con, $quary);
-    header("Location:../index.php");
+    echo "<script>
+    alert('Booking Successful !!');
+    window.location.href='../bookinghistory.php';
+    </script>";
 }
