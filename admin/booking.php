@@ -104,16 +104,26 @@ $user_name = $_SESSION['tms'];
                                     <td>" . $row['countpeople'] . "</td>
                                     <td>" . $row['totalamount'] . "</td>
                                     <td>" . $row['status'] . "</td>
-                                    <td>
-                                    <form action='./processes/booking-processs.php?id=$row[id]' method='post'>
-                                      <input type='submit'  class='btn btn-primary' value='Aprove' />
-                                      </form>
-                                    </td>
-                                      <td>
-                                      <form action='./processes/booking-process.php?id=$row[id]' method='post'>
-                                      <input type='submit'  class='btn btn-danger' value='Cancle' />
-                                      </form>
-                                      </td>
+                                    <td>";
+                                    switch ($row['status']){
+                                      case 'pending':
+                                        echo "<form action='./processes/booking-process.php' method='post'>
+                                          <input type='hidden' value='$row[id]' id='id' name='id'>
+                                          <input type='submit' class='btn btn-primary' name='aprove' id='aprove' value='Aprove' />
+                                          <input type='hidden' value='$row[id]' id='id' name='id'>
+                                          <input type='submit' class='btn btn-danger' name='cancel' id='cancel' value='Cancel' />
+                                          </form>";
+                                          break;
+                                          case 'aprove by admin':
+                                            echo "<form action='./processes/booking-process.php' method='post'>
+                                            <input type='hidden' value='$row[id]' id='id' name='id'>
+                                              <input type='submit' class='btn btn-danger' name='cancel' id='cancel' value='Cancel' />
+                                              </form>";
+                                              break;
+                                              default:
+                                              break;
+                                    }
+                                    echo "</td>
                                 </tr>";
                     }
                     ?>

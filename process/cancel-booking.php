@@ -1,15 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tms";
+include '../database/connection.php';
+if (isset($_POST['cancel'])) {
 
-$con = mysqli_connect($servername, $username, $password, $dbname);
+    $id = $_POST['id'];
 
-    $id = $_GET['id'];
-
-
-    $sql = "UPDATE booking SET status='cancel by user' WHERE id=$id";
-    $data=mysqli_query($con, $sql);
+    $sql = "UPDATE booking SET status='cancel by user' WHERE id='$id'";
+    $data = mysqli_query($con, $sql);
     header("Location:../bookinghistory.php");
-    ?> 
+}

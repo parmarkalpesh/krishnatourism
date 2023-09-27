@@ -66,7 +66,7 @@
        <!-- end table row -->
      </thead>
      <tbody>
-       <!-- <form > -->
+       <!-- <form action="./process/cancel-booking.php" method="post"> -->
          <?php
           $sql = "SELECT packages.packagename as pname,booking.id,booking.name,booking.date,booking.countpeople,booking.totalamount,booking.status FROM packages,booking where packages.id=booking.package_id and user_id=$user_id";
           $data = mysqli_query($con, $sql);
@@ -80,16 +80,26 @@
                       <td>" . $row['countpeople'] . "</td>
                       <td>" . $row['totalamount'] . "</td>
                       <td>" . $row['status'] . "</td>
-                      <td>
-                      <form action='./process/cancel-booking.php?id=$row[id]' method='post'>                              
-                      <input type='submit' id='cancle' class='btn btn-danger'  onclick='hideButton(this)' name='submit' value='Cancel' />
-                        </form>
-                      </td>
+                      <td>";
+                      switch($row['status'])
+                      {
+                        case 'pending':
+                          echo "<form action='./process/cancel-booking.php' method='post'>
+                          <input type='hidden' value='$row[id]' id='id' name='id'>
+                          <input type='submit' id='cancel' class='btn btn-danger' name='cancel' value='Cancel' />
+                          </form>";
+                        break;
+                        default:
+                        break;
+
+                      }
+
+                      echo "</td>
                   </tr>";
           }
           ?>
          </tr>
-       <!-- </form> -->
+       </form>
        <!-- end table row -->
      </tbody>
    </table>
@@ -105,12 +115,15 @@
  <br>
  <br>
 
- <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script>
-function hideButton(cancle)
-{
-  cancle.style.display ='none';
-}
+
+ 
+<script type='text/javascript'>
+  document.getElementById("cancle").style.display="none";
+// function hideButton(cancle)
+// {
+//   cancle.style.display ='none';
+// }
+
   </script>
  
  <?php

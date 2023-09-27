@@ -1,15 +1,18 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tms";
+include '../../database/connection.php';
+if (isset($_POST['aprove'])) {
 
-$con = mysqli_connect($servername, $username, $password, $dbname);
+    $id = $_POST['id'];
 
-    $id = $_GET['id'];
+    $sql = "UPDATE booking SET status='aprove by admin' WHERE id='$id'";
+    $data = mysqli_query($con, $sql);
+    header("Location:../booking.php");
+} else if (isset($_POST['cancel'])) {
+
+    $id = $_POST['id'];
 
 
     $sql = "UPDATE booking SET status='cancel by admin' WHERE id=$id";
-    $data=mysqli_query($con, $sql);
+    $data = mysqli_query($con, $sql);
     header("Location:../booking.php");
-    ?> 
+}
