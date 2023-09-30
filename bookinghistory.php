@@ -86,6 +86,7 @@
                         case 'pending':
                           echo "<form action='./process/cancel-booking.php' method='post'>
                           <input type='hidden' value='$row[id]' id='id' name='id'>
+                          <input type='hidden' value='$user_name' id='user_name' name='user_name'>
                           <input type='submit' id='cancel' class='btn btn-danger' name='cancel' value='Cancel' />
                           </form>";
                         break;
