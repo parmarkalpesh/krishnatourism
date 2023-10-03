@@ -2,7 +2,7 @@
 <aside class="sidebar-nav-wrapper">
       <div class="navbar-logo">
         <a href="./dashboard.php">
-          <img src="./assets/images/logo/logo.png" alt="logo" style="height: 100px; width: 150px; " />
+          <img src="./assets/images/logo/logo.png" alt="logo" style="height: 80px; width: 130px; " />
         </a>
       </div>
       <nav class="sidebar-nav">
@@ -50,7 +50,7 @@
           <li class="nav-item">
             <a href="booking.php">
               <span class="icon">
-              <i class="lni lni-question-circle"></i>
+              <i class="lni lni-book"></i>
 
               </span>
               <span class="text">Booking</span>

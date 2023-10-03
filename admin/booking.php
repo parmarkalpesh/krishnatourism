@@ -106,12 +106,12 @@ $user_name = $_SESSION['tms'];
                                     <td>" . $row['status'] . "</td>
                                     <td>
                                     <form action='./processes/booking-processs.php?id=$row[id]' method='post'>
-                                      <input type='submit'  class='btn btn-primary' value='Aprove' />
+                                      <input type='submit'  class='btn btn-primary' value='Approve' />
                                       </form>
                                     </td>
                                       <td>
                                       <form action='./processes/booking-process.php?id=$row[id]' method='post'>
-                                      <input type='submit'  class='btn btn-danger' value='Cancle' />
+                                      <input type='submit'  class='btn btn-danger' value='Cancel' />
                                       </form>
                                       </td>
                                 </tr>";

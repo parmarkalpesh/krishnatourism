@@ -10,7 +10,7 @@ $confirmpassword = $_POST['confirmpassword'];
 $phoneno_format = '/^[0-9]{10}$/';
 if (!preg_match($phoneno_format, $phonenumber)) {
     echo "<script>
-    alert('invalid phone number');
+    alert('Phonenumber is only 10 digit');
     window.location.href='../register.php';
     </script>";
     return;

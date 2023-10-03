@@ -16,10 +16,20 @@ $totalamount = $_POST['totalamount'];
 
 if (!isset($_SESSION['tms'])) {
     echo "<script>
-    alert('Keep First Login !!');
+    alert('Please login for book the tour !!');
     window.location.href='../login.php';
     </script>";
-} else {
+} 
+
+$phoneno_format = '/^[0-9]{10}$/';
+if (!preg_match($phoneno_format, $phonenumber)) {
+    echo "<script>
+    alert('Phonenumber is only 10 digit');
+    window.location.href='../packages.php';
+    </script>";
+    return;
+}
+else {
 
     $quary = "INSERT INTO booking(`user_id`,`package_id`,`name`,phonenumber,`date`,`countpeople`,`totalamount`,`status`) VALUES('$user_id','$package_id','$name','$phonenumber','$date','$countpeople','$totalamount','pending')";
     $data = mysqli_query($con, $quary);

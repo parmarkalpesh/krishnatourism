@@ -82,14 +82,39 @@
                       <td>" . $row['status'] . "</td>
                       <td>
                       <form action='./process/cancel-booking.php?id=$row[id]' method='post'>                              
-                      <input type='submit' id='cancle' class='btn btn-danger'  onclick='hideButton(this)' name='submit' value='Cancel' />
+                      <input type='submit' id='cancle' class='btn btn-danger'  name='submit' value='Cancel' />
                         </form>
                       </td>
                   </tr>";
           }
           ?>
          </tr>
-       <!-- </form> -->
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+         <!-- </form> -->
+         <script>
+  $(document).ready(function() {
+    $(".cancel-btn").click(function() {
+      var bookingId = $(this).data('booking-id');
+      var button = $(this);
+
+      // Make an AJAX request to the cancellation process page
+      $.ajax({
+        url: './process/cancel-booking.php?id=' + bookingId,
+        type: 'POST',
+        success: function(response) {
+          // Handle the response as needed
+          // For example, you can hide the button upon success
+          button.hide();
+          alert('Booking canceled successfully');
+        },
+        error: function() {
+          alert('Error cancelling booking');
+        }
+      });
+    });
+  });
+</script>
+
        <!-- end table row -->
      </tbody>
    </table>
@@ -106,12 +131,7 @@
  <br>
 
  <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script>
-function hideButton(cancle)
-{
-  cancle.style.display ='none';
-}
-  </script>
+
  
  <?php
   include './includes/footer.php';

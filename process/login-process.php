@@ -18,11 +18,11 @@ echo "welcome" . $_SESSION['user_id'];
         $_SESSION['tms'] = $row['username'];
         $_SESSION['user_id'] = $row['id'];
 
-        header("Location:../index.php");
+        header("Location:../packages.php");
     }  
     else{  
         echo "<script>
-        alert('Cheak Username or Password');
+        alert('Wrong Username or Password');
         window.location.href='../login.php';
         </script>";
     }    

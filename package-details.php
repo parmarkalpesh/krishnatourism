@@ -28,7 +28,7 @@ $row = mysqli_fetch_assoc($all_package);
           <div class="row">
                <div class="col-md-7">
                     <div>
-                         <img src="./admin/upload/<?php echo $row['packageimage'] ?>" alt="" class="img-fluid wc-image" style=" width:  650px; height: 500px; object-fit: cover">
+                         <img src="./admin/upload/<?php echo $row['packageimage'] ?>" alt="" class="img-fluid wc-image" style=" width:  900px; height: 800px; object-fit: cover" >
                     </div>
                </div>
 
@@ -174,19 +174,13 @@ $row = mysqli_fetch_assoc($all_package);
                                                   <input class="form-control" name="package_id" type="text" value="<?php echo $id ?>" hidden>
 
                                                   <div class="form-group">
-                                                       <span class="form-label">Your Name</span>
-                                                       <input class="form-control" name="name" type="text" id="name" placeholder="Enter Phone Name">
+                                                       <span class="form-label">Booking Name</span>
+                                                       <input class="form-control" name="name" type="text" id="name" placeholder="Enter Phone Name" required>
 
                                                   </div>
                                                   <div class=" form-group">
-                                                       <!-- <?php
-                                                            // $sql = "SELECT * FROM user WHERE id=$user_id";
-                                                            // $result = $con->query($sql);
-                                                            // $row = mysqli_fetch_assoc($result);
-                                                            ?> -->
                                                        <span class="form-label">Your Phone Number</span>
-                                                       <input class="form-control" id="phonenumber" name="phonenumber" type="number" placeholder="Enter Phone Number">
-
+                                                       <input class="form-control" id="phonenumber" name="phonenumber" type="number" placeholder="Enter Phone Number" required>
                                                   </div>
                                                   <hr>
                                                   <div class="row">
