@@ -109,7 +109,7 @@ $user_name = $_SESSION['tms'];
                                       case 'pending':
                                         echo "<form action='./processes/booking-process.php' method='post'>
                                           <input type='hidden' value='$row[id]' id='id' name='id'>
-                                          <input type='submit' class='btn btn-primary' name='aprove' id='aprove' value='Aprove' />
+                                          <input type='submit' class='btn btn-primary' name='aprove' id='aprove' value='Approve' /><br><br>
                                           <input type='hidden' value='$row[id]' id='id' name='id'>
                                           <input type='submit' class='btn btn-danger' name='cancel' id='cancel' value='Cancel' />
                                           </form>";

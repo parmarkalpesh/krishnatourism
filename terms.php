@@ -25,11 +25,14 @@ include './includes/header.php';
             <span>&circledS; Tikets : </span>
             <h5>Package in inclueded all transportaion in railways.</h5>
             <br><br>
+            <span>&circledS; Not Included : </span>
+            <h5>Entry fees to mouments and sightseeing places is not included.</h5>
+            <br><br>
             <span>&circledS; Covid Guidelines : </span>
             <h5> Guidelines of the Center/State Government regarding Covid-19 have to be followed - Please cooperate</h5>
             <br><br>
             <span>&circledS; With you  : </span>
-            <h5> Keep Identycard approved by Government.</h5>
+            <h5> Keep Identycard is necessary for your travel approved by Government.</h5>
             <br><br>
 
             <br>  

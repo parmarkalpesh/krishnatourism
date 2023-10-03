@@ -210,7 +210,7 @@
               </form>
 
               <span class="d-block text-left my-4 text-muted">
-                I have alredy Account <a href="./login.php">Login Now</a></span>
+              Already have an Account ?<a href="./login.php">Login Now</a></span>
             </div>
           </div>
         </div>

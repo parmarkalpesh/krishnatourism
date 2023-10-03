@@ -28,7 +28,7 @@ $row = mysqli_fetch_assoc($all_package);
           <div class="row">
                <div class="col-md-7">
                     <div>
-                         <img src="./admin/upload/<?php echo $row['packageimage'] ?>" alt="" class="img-fluid wc-image" style=" width:  650px; height: 500px; object-fit: cover">
+                         <img src="./admin/upload/<?php echo $row['packageimage'] ?>" alt="" class="img-fluid wc-image" style=" width:900px; height: 800px; object-fit: cover">
                     </div>
                </div>
 
@@ -175,17 +175,12 @@ $row = mysqli_fetch_assoc($all_package);
 
                                                   <div class="form-group">
                                                        <span class="form-label">Your Name</span>
-                                                       <input class="form-control" name="name" type="text" id="name" placeholder="Enter Phone Name">
+                                                       <input class="form-control" name="name" type="text" id="name" placeholder="Enter Phone Name" required>
 
                                                   </div>
                                                   <div class=" form-group">
-                                                       <!-- <?php
-                                                            // $sql = "SELECT * FROM user WHERE id=$user_id";
-                                                            // $result = $con->query($sql);
-                                                            // $row = mysqli_fetch_assoc($result);
-                                                            ?> -->
                                                        <span class="form-label">Your Phone Number</span>
-                                                       <input class="form-control" id="phonenumber" name="phonenumber" type="number" placeholder="Enter Phone Number">
+                                                       <input class="form-control" id="phonenumber" name="phonenumber" type="number" placeholder="Enter Phone Number" required>
 
                                                   </div>
                                                   <hr>
@@ -249,7 +244,7 @@ $row = mysqli_fetch_assoc($all_package);
                                    <td><?php echo $row['packagename'] ?></td>
                                    <td>Jamnagar</td>
                                    <td><?php echo $row['packagelocation'] ?></td>
-                                   <td> &circledR; <?php echo $row['packageprice'] ?> per parson</td>
+                                   <td><?php echo $row['packageprice'] ?> per parson</td>
                               </tr>
 
 
@@ -364,14 +359,14 @@ $row = mysqli_fetch_assoc($all_package);
                          <div class="row">
                               <div class="col-md-2 col-sm-3">
                                    <p>
-                                        <strong>Fees</strong>
+                                        <strong>Hotel</strong>
                                    </p>
                               </div>
 
                               <div class="col-md-10 col-sm-9">
                                    <div>
                                         <p>
-                                             Hotels and other transportaion charges extra.
+                                             Honest Hotels
                                         </p>
                                    </div>
                               </div>

@@ -29,7 +29,7 @@ $all_package = $con->query($sql);
             <div class="down-content">
 							<h4><?php echo $row["packagename"] ?></h4>
               <p><?php echo $row["packagetitle"] ?></p>
-							<a href="package-details.php?id=<?php echo $row['id'] ?>"><button type="button" class="btn btn-primary">view Details</button></a>
+							<a href="package-details.php?id=<?php echo $row['id'] ?>"><button type="button" class="btn btn-primary">View Details</button></a>
 
             </div>
           </div>

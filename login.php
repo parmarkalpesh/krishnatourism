@@ -193,7 +193,7 @@
               </form>
 
               <span class="d-block text-left my-4 text-muted">
-                I don't have Account <a href="./register.php">Register here</a></span>
+                Do not have an account <a href="./register.php">Register here</a></span>
             </div>
           </div>
         </div>

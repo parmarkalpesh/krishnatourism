@@ -8,5 +8,10 @@ if (isset($_POST['cancel'])) {
 
     $sql = "UPDATE booking SET status='$status' WHERE id='$id'";
     $data = mysqli_query($con, $sql);
+    echo "<script>
+    alert('Booking cancelled !!');
+    window.location.href='../bookinghistory.php';
+    </script>";
     header("Location:../bookinghistory.php");
 }
+?>

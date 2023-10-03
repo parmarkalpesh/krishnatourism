@@ -31,7 +31,7 @@ session_start();
         <div class="row content d-flex justify-content-center align-items-center">
             <div class="col-md-5">
                 <div class="box shadow bg-white p-4">
-                    <h3 class="mb-4 text-center fs-1">Login Now</h3>
+                    <h3 class="mb-4 text-center fs-1">Admin Login</h3>
 
                     <form action="./processes/admin-process.php" method="post">
                         <div class="form-group first">
