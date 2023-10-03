@@ -36,7 +36,7 @@ $all_package = $con->query($sql);
     <div class="item item-3">
       <div class="img-fill">
         <div class="text-content">
-          <h6>let's connect to us </h6>
+          <h6>Explore our office</h6>
           <h4>let's connect to us </h4>
           <a href="contact.php" class="filled-button">Contact Us</a>
         </div>
@@ -126,7 +126,7 @@ $all_package = $con->query($sql);
       <div class="col-md-8">
         <section class='tabs-content'>
           <article id='tabs-1'>
-            <img src="assets/images/blog-image-1-940x460.jpg" alt="">
+            <img src="assets/images/why choose us1.png" alt="">
           </article>
 
         </section>
